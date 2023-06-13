@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dette er tittelen på siden/fanen-->
+    <title>Designmanual</title>
+    <!--Dette er ikonet til fanen (den står til venstre for tittelen)-->
+    <link rel="icon" type="image/x-icon" href="bilder/MHA_logo.svg">
+    <link href="http://fonts.cdnfonts.com/css/ostrich-sans-2" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/ostrich-sans-2');
+    </style>
+    <!---Burger meny ikonet er fra "Font Awesome"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="nett">
+        <div class="topp">
+            <div class="header"><a href="index.html"><img src="bilder/MHA_logo.svg" alt="Logo" width="100"></a></div>
+            <div class="pcnav">
+                <a href="index.html"><p>Hjem</p></a>
+                <a href="om_meg.html"><p>Om meg</p></a>
+                <a href="Plan_S.html"><p>Plan, skisse osv...</p></a>
+                <a href="designmanual.html" class="active"><p>Designmanual</p></a>
+                <a href="Portefolje.html"><p>Portefølje</p></a>
+                <a href="pc_bygging.html"><p>PC Bygging</p></a>
+                <a href="kort.html"><p>Lag Info Kort</p></a>
+            </div>
+            <div id="nav_768">
+                <a href="designmanual.html" class="active"><p>designmanual</p></a>
+                <div id="myLinks">
+                    <a href="index.html"><p>Hjem</p></a>
+                    <a href="om_meg.html"><p>Om meg</p></a>
+                    <a href="Plan_S.html"><p>plan, skisse osv...</p></a>
+                    <a href="Portefolje.html"><p>portefølje</p></a>
+                    <a href="pc_bygging.html"><p>PC Bygging</p></a>
+                    <a href="kort.html"><p>Lag Info Kort</p></a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+            </div>
+        </div>
+        <div class="innhald">
+            <h1>Designmanual</h1>
+            <h2>Logo</h2>
+            <div class="logoer1">
+                <img src="bilder/MHA_logo.svg" width="300" alt="Logo1" id="MHA_farger">
+                <img src="bilder/designmanual/MHA_Logo_monochrome_black.svg" alt="Logo2" width="300" id="MHA_black">
+                <img src="bilder/designmanual/MHA_Logo_monochrome_grayscale.svg" alt="Logo3" width="300" id="MHAgrayscale">
+            </div>
+                <br>
+                <img src="bilder/designmanual/pereimeter2.png" alt="Logo4" width="600" id="perimeter">
+
+            <h2>Farger</h2>
+            <div class="fargerr">
+                <div class="fargerBrukt">
+                    <div class="Ff2e600"></div>
+                    <div class="Ffde100"></div>
+                    <div class="F7cbe73"></div>
+                    <div class="F38b8be"></div>
+                    <div class="F008182"></div>
+                </div>
+                <div class="fargeKode">
+                    <div class="Tf2e600">
+                        <p>RGB: 242, 230, 0 <br>
+                            CMYK: 10, 0, 94, 0 <br>
+                            HEX: #f2e600
+                        </p>
+                    </div>
+                    <div class="Tfde100">
+                        <p>RGB: 253, 225, 0 <br>
+                        CMYK: 4, 6, 92, 0 <br>
+                        HEX: #fde100</p>
+                    </div>
+                    <div class="T7cbe73">
+                        <p>RGB: 124, 190, 115 <br>
+                        CMYK: 57, 0, 68, 0 <br>
+                        HEX: #7cbe73</p>
+                    </div>
+                    <div class="T38b8be">
+                        <p>RGB: 56, 184, 190 <br>
+                        CMYK: 69, 0, 29, 0 <br>
+                        HEX: #38b8be</p>
+                    </div>
+                    <div class="T008182">
+                        <p>RGB: 0, 129, 130 <br>
+                        CMYK: 84, 27, 47, 11 <br>
+                        HEX: #008182</p>
+                    </div>
+                </div>
+            </div>
+            <h2 id="teksssst">Tekst</h2>
+            <div class="fonts">
+                <div class="font1">
+                    <h2>Overskrift</h2>
+                    <h6>O s t r i c h  . S a n s   2 <br>
+                    1 2 3 4 5 6 7 8 9 0 <br>
+                    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ø Å <br>
+                    a b c d e f g h i j k l m n o p q r s t u v w x y z æ ø å</h6>
+                </div>
+                <div class="font2">
+                    <h2>Brødtekst</h2>
+                    <h6>C o u r i e r  . N e w <br>
+                    1 2 3 4 5 6 7 8 9 0 <br>
+                    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ø Å <br>
+                    a b c d e f g h i j k l m n o p q r s t u v w x y z æ ø å </h6>
+                </div>
+            </div>
+            <div class="dmknapp"><p><a href="Designmanual/designmanual.indd">Last ned her!</a></p></div>
+        </div>
+        <div class="footer"><p>Copyright © Mikkel Huth Andersen 2021</p></div>
+    </div>
+    <!---Denne Javascript funksjonen skjuler de andre knappene i navigasjonen helt til man trykker på burger menyen-->
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+</body>
+</html>

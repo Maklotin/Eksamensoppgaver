@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjem - Abra Havn</title>
+    <link rel="icon" type="image/x-icon" href="bilder/logo/ABRA_havn_logo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nettside_booking">
+        <div class="header">
+            <a href="logged_inn_index.html"><img src="bilder/logo/ABRA_havn_logo.svg" width="150" id="logo"></a>
+            <div class="nav">
+                <a href="logged_inn_index.html">
+                    <p>Hjem</p>
+                </a>
+                <a href="logged_inn_booking.html" class="active">
+                    <p>Book nå</p>
+                </a>
+                <a href="logged_inn.html">
+                    <p>Logg inn</p>
+                </a>
+            </div>
+        </div>
+        <div class="innhold">
+            <h1>Book hotellrom hos Abra Havn!</h1>
+            <hr>
+            <div class="info">
+                <p>Takk for at du velger Abra Havn! Hos oss kan du bestille rom for opptil 6 personer, frokost og dagspass
+                    til vår spennende park og badeland!</p>
+                <img src="bilder/abra-havn-at-dyreparken.jpg" width="300">
+            </div>
+            <div class="bookingen">
+                <div class="booking_tabell">
+                    <table id="booking">
+                        <tr>
+                            <td>
+                                <p>antall personer</p>
+                            </td>
+                            <td>
+                                <p>velg antall personer</p>
+                                <select id="antall_personer">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </td>
+                            <td>
+                                <p>Pris per person: 799kr</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Dato</p>
+                            </td>
+                            <td>
+                                <p>Fra:</p>
+                                <input type="date" id="dato1">
+                                <p>Til:</p>
+                                <input type="date" id="dato2">
+                            </td>
+                            <td>
+                                <p>Pris per natt: 799kr</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Frokost</p>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="frokost" id="ja_til_frokost" checked>
+                            </td>
+                            <td>
+                                <p>Pris per person: 150kr</p>
+                            </td>
+                        </tr>
+                        <tr id="dagspass_tabell">
+                            <td>
+                                <p>Dagspass</p>
+                            </td>
+                            <td id="dagspass_checkbox">
+                                <div>
+                                    <input type="radio" name="dagspass" id="dyrepark">
+                                    <label>Dagsbillett for dyreparken</label>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="radio" name="dagspass" id="badeland">
+                                    <label>Dagsbillett for badeland</label>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="radio" name="dagspass" id="begge" checked>
+                                    <label>Dagsbillett for begge</label>
+                                </div>
+                            </td>
+                            <td>
+                                <p>269kr</p>
+                                <p>199kr</p>
+                                <p>349kr</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="bekreft_booking">
+                    <p>Pris totalt:</p>
+                    <h1 id="total_pris">0 NOK</h1>
+                    <button onclick="oppdaterPris()">Oppdater pris</button>
+                    <button onclick="bekreftBooking()">Bekreft Booking</button>
+                </div>
+            </div>
+            <h3>Kvittering</h3>
+            <hr>
+            <div id="kvittering">
+                <div id="kvittering_top">
+                </div>
+                <div id="kvittering_info">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

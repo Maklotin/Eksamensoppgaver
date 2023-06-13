@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dette er tittelen på siden/fanen-->
+    <title>Hjem</title>
+    <!--Dette er ikonet til fanen (den står til venstre for tittelen)-->
+    <link rel="icon" type="image/x-icon" href="bilder/MHA_logo.svg">
+    <link href="http://fonts.cdnfonts.com/css/ostrich-sans-2" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/ostrich-sans-2');
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+    <!---Burger meny ikonet er fra "Font Awesome"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="nett">
+    <div class="topp">
+        <div class="header"><a href="index.html"><img src="bilder/MHA_logo.svg" alt="Logo" width="100"></a></div>
+        <div class="pcnav">
+            <a href="index.html"><p>Hjem</p></a>
+            <a href="om_meg.html"><p>Om meg</p></a>
+            <a href="Plan_S.html"><p>Plan, skisse osv...</p></a>
+            <a href="designmanual.html"><p>Designmanual</p></a>
+            <a href="Portefolje.html"><p>Portefølje</p></a>
+            <a href="pc_bygging.html"><p>PC Bygging</p></a>
+            <a href="kort.html" class="active"><p>Lag Info Kort</p></a>
+        </div>
+        <div id="nav_768">
+            <a href="index.html"><p>Hjem</p></a>
+            <div id="myLinks">
+              <a href="om_meg.html"><p>Om meg</p></a>
+                <a href="Plan_S.html"><p>plan, skisse osv...</p></a>
+                <a href="designmanual.html"><p>designmanual</p></a>
+                <a href="Portefolje.html"><p>portefølje</p></a>
+                <a href="pc_bygging.html"><p>PC Bygging</p></a>
+                <a href="kort.html" class="active"><p>Lag Info Kort</p></a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </div>
+    </div>
+    <div class="innhold2">
+      <table id="Kort_instillinger">
+        <tr>
+          <td><input onchange="endreFargePaaKort()" type="color" name="endreTekstFarge" id="endre_tekst_farge" value="#000000"></td>
+          <td><button id="endre_tekstfarge" onclick="endreFargePaaKort()">Endre tekst farge</button></td>
+        </tr>
+        <tr>
+          <td>
+            <select id="velg_font_select" onchange="endreFont()">
+              <option value="0">-Velg font-</option>
+              <option id="Aria" value="Arial, Helvetica, sans-serif">Arial</option>
+              <option id="Cambria" value="Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Cambria</option>
+              <option id="Courier" value="'Courier New', Courier, monospace">Courier New</option>
+              <option id="Franklin" value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Franklin Gothic Medium</option>
+              <option id="Georgia" value="Georgia, 'Times New Roman', Times, serif">Georgia</option>
+              <option id="Gill" value="'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Gill Sans</option>
+              <option id="Impact" value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Impact</option>
+              <option id="Lucida" value="'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Lucida Sans</option>
+              <option id="Segoe" value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Segoe UI</option>
+              <option id="Times" value="'Times New Roman', Times, serif">Times New Roman</option>
+              <option id="Trebuchet" value="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Trebuchet MS</option>
+              <option id="Verdana" value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+            </select>
+        </td>
+          <td><button id="velg_font" onclick="endreFont()">Velg font</button></td>
+        </tr>
+        <tr>
+          <td><p>200px x 200px .JPEG eller PNG</p><input onchange="loadFile(event)" id="bilde_paa_kort" type="file" accept="image/JPEG, image/PNG"></td>
+          <td><p>Sett Profilbilde</p></td>
+        </tr>
+        <tr>
+          <td><input onchange="foedselsDato()" type="date" id="foedselsdato"></td>
+          <td><button onclick="foedselsDato()">Sett fødselsdato</button></td>
+        </tr>
+      </table>
+
+    <div id="kort">
+      <div id="top_kort">
+        <div id="kort_bilde">
+          <img src="bilder/profile_pic_placeholder.jpg" id="kort_bilde_img" alt="profilebilde Placeholder">
+        </div>
+          <div id="kort_info">
+            <h1 id="kort_navn" contenteditable="true">Navn Navnesen</h1>
+            <div id="kort_info2">
+              <p id="foedt">Født:</p>
+              <p id="dato">år-måned-dag</p>
+              <div id="pronomen">
+                <p id="pronomen_tekst">Pronomen:</p>
+                <p id="pr1" class="editable" contenteditable="true">Han</p>
+                <p id="skraastrek">/</p>
+                <p id="pr2" class="editable" contenteditable="true">Ham</p>
+              </div>
+              <p id="bosted_tekst">Bosted:</p>
+              <div id="bosted">
+                <p id="sted_tekst" class="editable" contenteditable="true">Sted</p>
+                <p id="komma1">, </p>
+                <p id="by_tekst" class="editable" contenteditable="true">By</p>
+                <p id="komma2">, </p>
+                <p id="land_tekst"class="editable" contenteditable="true">Land</p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="bunn_kort">
+        <p id="bio" contenteditable="true" >skriv inn en kort oppsumering av deg</p>
+        <div id="skole_kort">
+          <p id="utdanning_tekst">Utdanning:</p>
+          <p id="skole_tekst" class="editable" contenteditable="true">[skriv inn skole]</p>
+          <p id="jobb_tekst">Jobb:</p>
+          <p id="jobb_tekst2" class="editable" contenteditable="true">[Skriv inn jobb/stilling]</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button id="print_kort" onclick="printKort()">Print ut som PDF</button>
+    <div class="footer" id="infotekst0"><p>Copyright © Mikkel Huth Andersen 2021</p></div>
+</div>
+</div>
+<script src="script.js"></script>
+<!---Denne Javascript funksjonen skjuler de andre knappene i navigasjonen helt til man trykker på burger menyen-->
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+</body>
+</html>

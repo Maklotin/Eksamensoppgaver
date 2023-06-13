@@ -1,0 +1,132 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+}
+
+#forside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#forside h1 {
+    color: yellow;
+    text-shadow: 0.35vh 0.35vh teal;
+    font-size: 6vh;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+}
+
+.strek {
+    color: yellow;
+    border: 2px solid yellow;
+    width: 80%;
+    margin-bottom: 2vh;
+}
+
+.strek2 {
+    color: yellow;
+    border: 2px solid yellow;
+    width: 40%;
+    margin-bottom: 2vh;
+}
+
+.strek3 {
+    color: yellow;
+    border: 2px solid yellow;
+    width: 30%;
+    margin-bottom: 2vh;
+}
+
+.nav {
+    margin-bottom: 6vh;
+}
+
+.knapp {
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 3vh;
+    color: yellow;
+    background-color: transparent;
+    text-shadow: 0vh 0vh 0vh yellow;
+    border: none;
+    box-shadow: 0vh 0vh 0vh black;
+    margin: 3vh;
+    transition: all 0.3s ease;
+}
+
+.knapp2 {
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 3vh;
+    color: yellow;
+    background-color: transparent;
+    text-shadow: 0vh 0vh 0vh yellow;
+    border: none;
+    box-shadow: 0vh 0vh 0vh black;
+    padding: 1vh 0vh;
+    margin: 3vh;
+    transition: all 0.3s ease;
+}
+
+.knapp:hover, .knapp2:hover {
+    color: teal;
+    background-color: yellow;
+    text-shadow: 0vh 0vh 1vh cyan;
+    border: 0.1vh solid cyan;
+    box-shadow:  0vh 0vh 2vh cyan;
+    padding: 1vh 2vh;
+
+}
+
+#forside h2 {
+    color: yellow;
+    text-shadow: 0.35vh 0.35vh teal;
+    font-size: 4vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+#forside h3 {
+    color: yellow;
+    text-shadow: 0.3vh 0.3vh teal;
+    font-size: 3vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info p {
+    margin: 6vh;
+}
+
+.bilder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.scrnsht {
+    width: 40%;
+    height: 40%;
+    margin-right: 2vh;
+    box-shadow: 0vh 0vh 1vh yellow;
+    margin-top: 2vh;
+}
+
+.tekst_og_liste, p {
+    color: white;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-weight: bold;
+    font-size: 2vh;
+}

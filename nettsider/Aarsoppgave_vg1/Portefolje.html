@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="nn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Dette er tittelen på siden/fanen-->
+  <title>Portefølje</title>
+  <!--Dette er ikonet til fanen (den står til venstre for tittelen)-->
+  <link rel="icon" type="image/x-icon" href="bilder/MHA_logo.svg">
+  <link rel="stylesheet" href="style.css">
+  <link href="http://fonts.cdnfonts.com/css/ostrich-sans-2" rel="stylesheet">
+  <style>
+    @import url('http://fonts.cdnfonts.com/css/ostrich-sans-2');
+  </style>
+  <!---Burger meny ikonet er fra "Font Awesome"-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="nett">
+    <div class="topp">
+      <div class="header"><a href="index.html"><img src="bilder/MHA_logo.svg" alt="Logo" width="100"></a></div>
+      <div class="pcnav">
+        <a href="index.html">
+          <p>Hjem</p>
+        </a>
+        <a href="om_meg.html">
+          <p>Om meg</p>
+        </a>
+        <a href="Plan_S.html">
+          <p>Plan, skisse osv...</p>
+        </a>
+        <a href="designmanual.html">
+          <p>Designmanual</p>
+        </a>
+        <a href="Portefolje.html" class="active">
+          <p>Portefølje</p>
+        </a>
+        <a href="pc_bygging.html">
+          <p>PC Bygging</p>
+        </a>
+        <a href="kort.html">
+          <p>Lag Info Kort</p>
+        </a>
+      </div>
+      <div id="nav_768">
+        <a href="Portefolje.html" class="active">
+          <p>portefølje</p>
+        </a>
+        <div id="myLinks">
+          <a href="index.html">
+            <p>Hjem</p>
+          </a>
+          <a href="om_meg.html">
+            <p>Om meg</p>
+          </a>
+          <a href="Plan_S.html">
+            <p>plan, skisse osv...</p>
+          </a>
+          <a href="designmanual.html">
+            <p>designmanual</p>
+          </a>
+          <a href="pc_bygging.html">
+            <p>PC Bygging</p>
+          </a>
+          <a href="kort.html">
+            <p>Lag Info Kort</p>
+          </a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    <div class="innhald">
+      <div class="header11">
+        <h1>Min portefølje</h1>
+      </div>
+      <P>her kan du se andre prosjekter eller ting jeg har laget.</P>
+      <div class="nettsider">
+        <h1>Nettsider</h1>
+        <hr>
+        <div class="Oslo_lacrosse_O">
+          <h1>Oslo Lacrosse</h1>
+        </div>
+        <div class="Oslo_lacrosse">
+          <img src="oppdrag_1/Oslo__Lacrosse/Logo/Logo.svg" alt="OL_Logo" width="200">
+          <div class="tekst_OL">
+            <p>På skolen fikk vi i oppdrag å lage en nettside til en Lacrosse lag som heter Oslo Lacrosse.
+              Vi fikk en uke å lage nettsiden ved hjelp av en designmanual og forklart hva de forskjellige
+              sidene skulle inneholde. Jeg rakk ikke å gjøre ferdig siden, bare 3 av 5 sider ble ferdig
+              ish. Dette er fordi det oppsto et problem som jeg brukte 2 av 5 dager på å fikse. Jeg rakk
+              heller ikke å gjøre nettsiden responsiv slik at man kan bruke den på flere skjermen med
+              varierende størrelser.</p>
+            <p id="NB">NB! Nettsiden ble aldri ferdig. Det kan være problemer med skalering så derfor
+              anbefales
+              det å åpne nettsiden på en 1440p skjerm. Det vil også være noen knapper som ikke funker.
+              (Knappen er deaktivert for mobilversjonen</p>
+            <div class="kn">
+              <!-- target="_blank" gjør slik at Lacrosse siden åpnes i en ny fane, slik at man lett kan gå tilbake til denne nettsiden uten at jeg må legge til en knapp på hver side i Lacrosse siden som går tilbake til Portefølje siden-->
+              <a href="oppdrag_1/A_index.html" target="_blank">Sjekk ut nettsiden</a>
+            </div>
+          </div>
+        </div>
+        <div id="OL_bilder">
+          <img src="bilder/Portefølje/OL_index.png" alt="OLforside" id="OL_index">
+          <img src="bilder/Portefølje/OL_OmOss.png" alt="OLomOss" id="OL_OmOss">
+          <img src="bilder/Portefølje/OL_Kalender.png" alt="OLKalender" id="OL_Kalender">
+        </div>
+      </div>
+      <hr>
+      <div class="KarakterK">
+        <h1>Karater Kalkulator</h1>
+        <p>Oppdrag 3 på skolen var å lage en kalkulator du kan bruke for å regne ut karaktersnittet ditt.
+          Kriteriene var at både en 10. Klassing som begynner på VG1 kan bruke den OG en VG1 som begynner på
+          VG2 kan bruke den. Med andre ord betyr det at det må være en måte man kan egge til og fjerne fag,
+          noe som kalkulatoren min kan (på en måte). Om du ikke fyller inn ett tall i et av fagene vil ikke
+          kalkulatoren regne den med i snittet ditt. Du kan også endre navn på fagene i tilfelle du har
+          yrkesfag eller andre fag enn de som står der. Dette var det første oppdraget hvor vi skulle bruke
+          Javascript. </p>
+        <img src="Oppdrag_3/KarakterKalkulator.png" width="700" alt="KarakterK_bilde">
+        <a href="Oppdrag_3/index.html" target="_blank" id="KKKnapp">Prøv ut kalkulatoren</a>
+      </div>
+      <hr>
+      <div class="Abra_Havn_O">
+        <h1>Abra Havn</h1>
+      </div>
+      <div class="Abra_Havn">
+        <img src="Oppdrag_4/bilder/logo/ABRA_havn_logo.svg" alt="AbraHavn_Logo" width="200">
+        <div class="tekst_AH">
+          <p>På skolen fikk vi i oppdrag å lage en nettside hvor man kunne booke rom hos Abra Havn. Nettsiden
+            min inneholder innlogging og registrer bruker funksjon, samt et halvferdig booking system som
+            jeg ikke rakk å bli helt ferdig med fordi vi fikk 2 uker på å lage nettsiden, men jeg fikk
+            influensa den andre uka. Jeg rakk da ikke å lage en side for admins for nettsiden hvor de ville få oversikt
+            over alle brukere som ble registrert og alle bestillinger. Jeg lagde da i stedet for en print funksjon som
+            printer ut en kvittering for alt du har bestilt.</p>
+          <p id="NB">NB! Jeg rakk ikke å gjøre nettsiden responsiv for mobil, derfor er knappen deaktivert
+            for mobilversjonen
+          </p>
+          <div class="kn">
+            <!-- target="_blank" gjør slik at Lacrosse siden åpnes i en ny fane, slik at man lett kan gå tilbake til denne nettsiden uten at jeg må legge til en knapp på hver side i Lacrosse siden som går tilbake til Portefølje siden-->
+            <a href="Oppdrag_4/index.html" target="_blank">Sjekk ut nettsiden</a>
+          </div>
+        </div>
+      </div>
+      <div id="OL_bilder">
+        <img src="bilder/Portefølje/Abra_Havn_forside.png" alt="OLforside" id="OL_index">
+        <img src="bilder/Portefølje/Abra_Havn_registrerbruker.png" alt="OLomOss" id="OL_OmOss">
+        <img src="bilder/Portefølje/Abra_Havn_book_kvittering.png" alt="OLKalender" id="OL_Kalender">
+      </div>
+      <hr>
+      <div class="videoer">
+        <h1>Videoer</h1>
+        <hr>
+        <div class="f_videoer">
+          <div class="skoleprosjekter">
+            <h1>Skoleprosjekter</h1>
+            <p>Dette er informative videoer som jeg har redigert og vært med på å lage.</p>
+            <div class="s_videoer">
+              <a href="https://www.youtube.com/watch?v=VCylU7MNFU4" target="_blank">Sorte hull -
+                Skoleprosjekt fra 8.
+                Klasse</a>
+              <a href="https://www.youtube.com/watch?v=wWHUCKRTjRY" target="_blank">Historie video om USA
+                og
+                Storbritannia</a>
+              <a href="https://youtu.be/V_AZHBpgENs" target="_blank">Video om Økosystem på Nesodden</a>
+              <a href="https://youtu.be/LaJAdv60AXI" target="_blank">Første IM Oppgave</a>
+              <a href="https://youtu.be/Ox3ZUGm6k9c" target="_blank">Reklame for fysisk skole</a>
+            </div>
+          </div>
+          <div class="andre_videoer">
+            <h1>Andre videoer</h1>
+            <p>Dette er andre videoer som jeg enten har laget helt selv eller bare redigert.</p>
+            <div class="y_knapp">
+              <a href="https://www.youtube.com/watch?v=l_dIsrCzlO0" target="_blank">Gaming Video</a>
+              <a href="https://www.youtube.com/watch?v=4nmSdiAStac" target="_blank">Musikk Video</a>
+              <a href="https://www.youtube.com/watch?v=-mYNpSbBj4E" target="_blank">Kritikk Video</a>
+              <a href="https://www.youtube.com/watch?v=a85lEYi28lc" target="_blank">Discord video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logoer">
+        <h1>Logoer</h1>
+        <hr>
+        <div class="KvadratK">
+          <h1>Kvadrat Kapital AS</h1>
+          <div class="KvadratK_info">
+            <div class="logoer1">
+              <img src="bilder/Portefølje/Kvadrat_Kapital_Logo_Stor1.png" alt="KvadratKLogo1" width="400"
+                id="KvadratK_P1">
+              <img src="bilder/Portefølje/Kvadrat_Kapital_AS_monochrome_1.png" alt="KvadratKLogoM" width="300"
+                id="KvadratK_P2">
+            </div>
+            <p>Et av oppdragene vi har fått på skolen var logodesign. Da lagde jeg en logo for et fiktivt
+              selskap som heter "Kvadrat Kapital AS". Jeg lagde en farget logo og en monochrome logo. <br>
+              blå og grønnfargen representer en positiv endring, en positiv økning. Fire ruter oppå
+              hverandre med farge som starter på blått og lager en overgang til grønn på den øverste
+              symboliserer som sagt en økning, at den øverste kvadraten er en ny kvadrat som er der for å
+              belønne kunden. Jeg tenkte at dette elementet virket relevant til firmaet med tanke på at
+              det er et firma som skal hjelpe deg med å ta gode økonomiske handlinger</p>
+          </div>
+        </div>
+        <hr>
+        <div class="MHA_logoer">
+          <h1>Min egen logo / MHA logo</h1>
+          <hr>
+          <div class="MHA_info">
+            <div class="MHA_logo">
+              <img src="bilder/Portefølje/MHA_Farger1.png" alt="MHALogo1" width="400" class="MHA_logoP">
+              <img src="bilder/Portefølje/MHA_Teal_Skygge.svg" alt="MHALogo2" width="300" class="MHA_logoP">
+            </div>
+            <p>Dette er min egen logo. Det er initialene mine. MHA = Mikkel Huth Andersen. I den øverste
+              logoen er M-en hele greia. H-en er den rød og oransje delen til høyre og A-en er gule delen
+              til venstre.Jeg den logoen med mange forskjellige fargevarianter, et av dem er den du ser
+              øverst til venstre over hele nettsiden. Logoen under er lettere å se at jeg satt sammen H og
+              A til høyre for M-en. Ikke like "avansert" men resultatet ble fortsatt ikke så ille.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © Mikkel Huth Andersen 2021</p>
+    </div>
+  </div>
+  <!---Denne Javascript funksjonen skjuler de andre knappene i navigasjonen helt til man trykker på burger menyen-->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>

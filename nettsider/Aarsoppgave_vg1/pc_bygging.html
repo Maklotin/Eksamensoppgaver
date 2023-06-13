@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dette er tittelen på siden/fanen-->
+    <title>PC Bygging (egenvalgt side)</title>
+    <!--Dette er ikonet til fanen (den står til venstre for tittelen)-->
+    <link rel="icon" type="image/x-icon" href="bilder/MHA_logo.svg">
+    <link href="http://fonts.cdnfonts.com/css/ostrich-sans-2" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/ostrich-sans-2');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <!---Burger meny ikonet er fra "Font Awesome"-->
+    <script src="https://kit.fontawesome.com/eee2f47811.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="nett">
+        <div class="topp">
+            <div class="header"><a href="index.html"><img src="bilder/MHA_logo.svg" alt="Logo" width="100"></a></div>
+            <div class="pcnav">
+                <a href="index.html">
+                    <p>Hjem</p>
+                </a>
+                <a href="om_meg.html">
+                    <p>Om meg</p>
+                </a>
+                <a href="Plan_S.html">
+                    <p>Plan, skisse osv...</p>
+                </a>
+                <a href="designmanual.html">
+                    <p>Designmanual</p>
+                </a>
+                <a href="Portefolje.html">
+                    <p>Portefølje</p>
+                </a>
+                <a href="pc_bygging.html" class="active">
+                    <p>PC Bygging</p>
+                </a>
+                <a href="kort.html"><p>Lag Info Kort</p></a>
+            </div>
+            <div id="nav_768">
+                <a href="pc_bygging.html" class="active">
+                    <p>PC Bygging</p>
+                </a>
+                <div id="myLinks">
+                    <a href="index.html">
+                        <p>Hjem</p>
+                    </a>
+                    <a href="om_meg.html">
+                        <p>Om meg</p>
+                    </a>
+                    <a href="Plan_S.html">
+                        <p>plan, skisse osv...</p>
+                    </a>
+                    <a href="designmanual.html">
+                        <p>designmanual</p>
+                    </a>
+                    <a href="Portefolje.html">
+                        <p>portefølje</p>
+                    </a>
+                    <a href="kort.html"><p>Lag Info Kort</p></a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="innhald">
+            <a href="#ip" id="ip_knapp">Video om hvordan sette IP adresse</a>
+            <div class="overskrift_PC">
+                <h1>Hvordan Bygge en PC</h1>
+            </div>
+            <p>Har du lyst til å bygge en PC fordi du vil enten spare penger, oppgradere i framtiden eller andre
+                grunner? vel her er en full guide til hvordan bygge en PC fra scratch. Det man trenger for å bygge en PC
+                er:</p>
+            <ol>
+                <li>Et hovedkort</li>
+                <li>En prosessor</li>
+                <li>RAM</li>
+                <li>Strømforsyning</li>
+                <li>Lagring (SSD eller HDD)</li>
+                <li>Skjermkort/Grafikk kort</li>
+                <li>Et kabinett til delene</li>
+            </ol>
+            <a id="topp_knapper"></a>
+            <p>Først bør du kanskje vite hva de forskjellige delene gjør. </p>
+            <div id="PC_deler_knapper">
+                <a id="knapp1PC" onclick="hovedkortPlakat()">Hovedkort</a>
+                <a id="knapp2PC" onclick="prosessorPlakat()">Prosessor</a>
+                <a id="knapp3PC" onclick="ramPlakat()">RAM</a>
+                <a id="knapp4PC" onclick="skjermkortPlakat()">Skjermkort</a>¨
+                <a id="knapp5PC" onclick="hddPlakat()">Lagring</a>
+                <a id="knapp6PC" onclick="psuPlakat()">Strømforsyning</a>
+                <a id="knapp7PC" onclick="dvdPlakat()">DVD brenner</a>
+                <button id="knapp8PC" onclick="tilbake()">&#8592; gå tilbake</button>
+                <a id="knapp9PC" href="#">les mer &#8595;</a>
+            </div>
+            <div id="PC_deler_knapper2">
+                <a id="knapp1PC2" href="#hovedkort">Hovedkort</a>
+                <a id="knapp2PC2" href="#cpu">Prosessor</a>
+                <a id="knapp3PC2" href="#ram">RAM</a>
+                <a id="knapp4PC2" href="#gpu">Skjermkort</a>
+                <a id="knapp5PC2" href="#lagring">Lagring</a>
+                <a id="knapp6PC2" href="#psu">Strømforsyning</a>
+            </div>
+            <br>
+            <p>Eller så kan du bare hoppe til stegene:</p>
+            <br>
+            <div class="knapper_guide">
+                <a href="#step1">Steg 1</a>
+                <a href="#step2">Steg 2</a>
+                <a href="#step3">Steg 3</a>
+                <a href="#step4">Steg 4</a>
+                <a href="#step5">Steg 5</a>
+                <a href="#step6">Steg 6</a>
+                <a href="#step7">Steg 7</a>
+            </div>
+            <a id="hovedkort"></a>
+            <h3>Hovedkort</h3>
+
+  
+            <div id="hovedkort_tekst">
+                <p>Hovedkortet (eller Motherboard på engelsk) er selve data chipen som kobler samme alle delene i en PC.
+                    Dette er hoveddelen i en PC
+                    som kommer til å bestemme hvilke andre deler PC'en din kan inneholde. Hovedkortet bestemmer
+                    prosessor
+                    sokkelen og strømfordelingen til delene. Sokkelen kan fortelle om hvilke prosessorer som er
+                    kompatibel
+                    med hovedkortet og hvor gammel hovedkortet er. I denne guiden skal vi ta utgangspunktet i en B450
+                    hovedkort med AM4 sokkel. AM4 sokkel betyr at den er kompatibel med AMD sine "Ryzen" prosessorer, og
+                    B450 forteller at det er 4. Generasjons B-hovedkort. B-hovedkort er hovedkort som gir relativt god
+                    strømfordeling til delene, som betyr at de kan tåle ganske kraftig prosessorer, rask RAM og andre
+                    funksjoner som f. Eks billigere hovedkort ikke har. Hovedkort kommer også i hovedsaklig 4
+                    størrelser: ITX, mATX, ATX og EATX. ATX er standarden, mATX = "mini ATX", ITX er enda mindre enn
+                    mATX og EATX = "Extended ATX". Disse størrelsene er viktig å huske på når du skal finne et kabinett
+                    til PC'en.</p>
+                <div id="hovedkort_bilde">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/ASUS_TUF_B450_Hovedkort.jpg" alt="asusTufb450" width="400">
+                    <p>Bilde tatt av: </p>
+                    <a href="https://commons.wikimedia.org/wiki/File:ASUS_TUF_B450-PLUS_GAMING_20181221.jpg"
+                     target="_blank">Tita Monto fra Wikimedia Commons</a>
+                </div>
+            </div>
+            <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="cpu"></a>
+            <h3>Prosessor / CPU </h3>
+
+            <div id="CPU">
+                <p>En prosessor (eller CPU - Central Processing Unit) er delen som håndterer alle oppgavene som blir
+                    gjort på en PC. Prosessoren samarbeider med de andre delene i PC'en for å utføre oppgavene. Det
+                    finnes foreløpig bare to prosessor produsenter innenfor DIY PC bygging, og det er AMD og Intel. I
+                    denne
+                    guiden demonstrerer vi ved bruk av en AMD Ryzen 9 5900x. Vi velger Ryzen fordi som jeg nevnte
+                    tidligere i teksten så skal vi bruke et B450 hovedkort. En AMD Ryzen 9 5900x er kompatibel med
+                    AM4 sokkelen fordi det er en Ryzen. 9 tallet indikerer hvor mange kjerner den har. Det finnes Ryzen
+                    3, 5 , 7 og 9. 9 betyr da at den har opp til 16 kjerner for øyeblikket. 5900x betyr at det er en 5.
+                    Generasjons prosessor i Ryzen serien av prosessorer. Siden den kan ha opp til 16 kjerner betyr det
+                    at den har høy strømforbruk, og høyt strømforbruk = mye varme. Dette betyr at den trenger mye aktiv
+                    kjøling. Derfor vil jeg heller anbefale å gå med Ryzen 3 - 7 (kommer ann på hva som passer i
+                    budsjettet ditt) fordi det følger med en prosessorkjøler med på kjøpet (med smørt kjølepasta som er
+                    noe du må putte mellom kjøleren og prosessoren for mest mulig effektivitet) slik at du slipper å
+                    gjøre
+                    research på hvilke som er kompatibel med hvilke (det er også denne kjøleren jeg kommer til å bruke i
+                    denne guiden). Det som er fint med Ryzen serien er at den er
+                    kompatibel med eldre Ryzenprosessorer. Så du kan følge denne tutorialen med hvilke som helst Ryzen
+                    prosessor og delene vil fortsatt være kompatibel med hverandre.</p>
+                <div id="CPU_bilde">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/AMD_Ryzen_9_5900X_by_BugWarp_03.jpg" alt="amdRyzen9" width="400">
+                    <p>Bilde tatt av:</p>
+                    <a href="https://commons.wikimedia.org/wiki/File:AMD_Ryzen_9_5900X_by_BugWarp_03.jpg"
+                        target="_blank">Bugwarp_03 fra Wikimedia Commons</a>
+                </div>
+            </div>
+            <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="ram"></a>
+            <h3>Minne / RAM</h3>
+            <div id="RAM">
+                <p>RAM - Random Access Memory er "korttids minne" til PC'en. RAM er ansvarlig for hvor mange gigabyte
+                    med media eller programmer som er oppe på en og samme gang. RAM kan f. Eks si noe om hvor mange
+                    Chrome sider oppe før det påvirker ytelsen til PC'en. RAM er spesielt nyttig om du driver med medie
+                    arbeid som foto eller video redigering. Standarden for RAM kapasitet for øyeblikket er 16GB RAM. RAM
+                    er universelt med all type hovedkort uavhengig av prosessortype. Det eneste du må være obs på er
+                    hvilke generasjon av RAM som er kompatibel med hovedkortet, generasjonene er DDR, DDR1, DDR2, DDR3,
+                    DDR4 og DDR5. Den som er aktuell for hovedkortet vi bruker i denne guiden er DDR4. DDR5 er ganske
+                    nytt og har foreløpig veldig få hovedkort som har støtte for det, men de kommer nok om et år eller
+                    mindre. Jeg anbefaler at du kjøper 2 RAM brikker i steden for 1 fordi da benytter du noe som heter
+                    "Dual Channel Memory" som da gjør at prosessoren din leser RAM Brikkene raskere og gjør hele
+                    kapasiteten til RAM brikkene lettere tilgjengelig for prosessoren å lese</p>
+                <div id="RAM_bilde">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/Random_Access_Memory_HyperX.jpg" alt="RAM" width="400">
+                    <p>Bilde tatt av:</p>
+                    <a href="https://commons.wikimedia.org/wiki/File:Random_Access_Memory_HyperX.jpg"
+                        target="_blank">Zsinytwiki fra Wikimedia Commons</a>
+                </div>
+            </div>
+            <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="gpu"></a>
+            <h3>Skjermkort / Grafikkort / GPU</h3>
+
+            <div id="GPU">
+                <p>GPU - Graphics Processing Unit er delen som er ansvarlig for å "processe" det visuelle. Denne er
+                    ansvarlig for at du kan se hva du gjør og er ekstremt viktig del hvis du skal drive med gaming eller
+                    3D modellering. Skjermkort har også sin egen RAM som er mye raskere enn vanlig RAM. Siden det er RAM
+                    til Video så blir det ofte kalt for VRAM. Grafikkortet er den delen i PC'en som krever mest strøm og
+                    derfor slipper ut mest varme. I dene guiden tar vi utgangspunktet i en RTX 3090 (et av de raskeste
+                    Gaming grafikkortene på markedet) fordi den er stor som gjør det enklere å demonstrere. Det finnes
+                    prosessorer (som oftes i laptoper eller jobb PC'er) som har innebygd grafikkort i prosessoren, dette
+                    kalles en iGPU eller Intergrated GPU og er som oftes mye svakere enn vanlig GPU'er, men har ofte
+                    stort fokus på lite strømbruk. iGPU er for små til å kunne ha egen VRAM og vil derfor benytte PC'ens
+                    RAM som VRAM.</p>
+                <div id="GPU_bilde">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/gigabyte_3090_gpu_1.jpg" alt="RTXside1" width="400">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/gigabyte_3090_gpu_2.jpg" alt="RTXside2" width="400">
+                    <p>bilder tatt av PantheraLeo1359531 fra Wikimedia Commons</p>
+                    <a href="https://commons.wikimedia.org/wiki/File:Gigabyte_GeForce_RTX_3090_Eagle_OC_24G,_24576_MiB_GDDR6X_Front_20201114_DSC5880.jpg"
+                        target="_blank">bilde 1</a>
+                    <a href="https://commons.wikimedia.org/wiki/File:Gigabyte_GeForce_RTX_3090_Eagle_OC_24G,_24576_MiB_GDDR6X_Seite_PIN-Stecker_20201114_HDR.jpg"
+                        target="_blank">bilde 2</a>
+                </div>
+            </div>
+            <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="lagring"></a>
+            <h3>Lagring - HDD, SSD</h3>
+   
+            <div id="Lagring">
+                <p>Lagring på en PC fungerer det samme som på en telefon. Lagringen er som en stor mappe som inneholder
+                    alle filene som du har lagret på PC'en totalt. Det finnes foreløpig 3 typer lagring som er relevant
+                    til denne PC'en <br><br>
+                    Harddisk / Harddrive / HDD - En harddisk er en fysisk spinnende disk som inneholder all lagringen på
+                    PC'en. Siden det er en spinnende disk (mer lignende en platespiller bare mye raskere) og ikke flash
+                    lagring (som en usb stick) så er harddisker den
+                    billigste form for lagring og kommer i 3,5 tommer og 2,5 tommer beholdere. Harddisker er praktisk
+                    lagring å beholde filer på, men blir slitt fortere og varer ikke like lenge, derfor anbefales det
+                    ikke å laste ned operativsystemet (Windows, Linux etc...) på denne. pga størrelsen til Harddisker og
+                    2,5" SSD'er så er disse kobla til PC'en via kabler. Disse kalles SATA kabler. Det finnes SATA data
+                    og SATA power. SATA Power er en kabel fra strømforsyningen som går til HDD/SSD og gir strøm til dem,
+                    mens SATA data går fra HDD/SSD til hovedkortet og gir PC'en tilgang til lagringen.<br><br>
+                    Solid State Drive / SSD - SSD'er kommer i 2 former: 2,5 tommer beholdere og som en M.2 SSD. SSD'er
+                    er lagring som funkerer nærmere en USB stick, det er minnebrikker i stedet for en spinnende disk som
+                    fører til lenger holdbarhet, raskere og høyere pris. En 2,5 tommers SSD er den billigste av de to,
+                    de er raskere enn harddisker, men pga bedre holdbarhet så anbefaler jeg å laste operativsystemet på
+                    den raskeste SSD'en du har. M.2 SSD'er er de raskeste og minste SSD'ene som finnes. i motsetning til
+                    både Harddisker og 2,5" SSD'er så kobles ikke M.2 SSD'er via kabel men er skruet og koblet til
+                    direkte i hovedkortet, dette fører til at disse kan bli mer enn 10x så raske som vanlig 2,5" kablet
+                    SSD'er. Disse er høyest anbefalt om det passer inn i budsjettet ditt (det er også denne vi bruker i
+                    denne guiden.</p>
+                <div id="Lagring_bilder">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/640px-Harddisk_opened.png" alt="HDD" width="200">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/OCZ_2'5_SSD.jpg" alt="SSD" width="200">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/Intel__mDot2_SSD_760p.png" alt="mDot2" width="200">
+                    <p>Bildene tatt av:</p>
+                    <a href="https://commons.wikimedia.org/wiki/File:Harddisk_opened.png" target="_blank">HDD bilde av
+                        Erwan velu fra
+                        Wikimedia Commons</a>
+                    <a href="https://commons.wikimedia.org/wiki/File:Vertex_2_Solid_State_Drive_by_OCZ-top_oblique_PNr%C2%B00307.jpg"
+                        target="_blank">2,5"
+                        SSD bilde fra D-Kuru fra Wikimedia Commons</a>
+                    <a href="https://commons.wikimedia.org/wiki/File:Intel_512G_M2_Solid_State_Drive.png"
+                        target="_blank">M.2 SSD bilde
+                        fra David290 fra Wikimedia Commons </a>
+                </div>
+            </div>
+            <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="psu"></a>
+            <h3>Strømforsyning / Power Supply / PSU</h3>
+
+            <div id="PSU">
+                <p>PSU - Power Supply Unit er delen som gir og fordeler strøm fra en strømkontakt fra veggen og inn til
+                    PC delene. Når man skal kjøpe strømforsyning er det viktig å kjøpe en fra en kjent produsent (som
+                    Corsair, Cooler Master, MSI, Seasonic) og anbefales sjeldent å kjøpe brukt. Dersom du kjøper brukt
+                    eller fra en ikke så troverdig produsent så kan strømforsyningen bli overbelastet som kan føre til
+                    at ikke bare den dør, men også alle delene som er kobla til den. Det som er viktig å se på når du
+                    skal kjøpe en strømforsyning er hvor mange Watt den har, hvor stor den er (slik at den passer i
+                    kabinettet) og hvor effektiv den er. Det finnes sertifiseringer som 80 plus, 80 plus Bronze, 80 plus
+                    Silver, 80 plus Gold og 80 Plus Platinum. jeg anbefaler å iallfall ha minst 80 Plus Bronze. Det
+                    finnes også modulære, semi-modulære og ikke-modulære strømforsyninger. Modulære betyr at du kan
+                    bytte ut kablene, semi modulær betyr at du kan bytte ut noen av kablene og ikke-modulær så følger
+                    det med kabler som ikke kan byttes ut. Du trenger ikke å være redd for om det følger med kabler som
+                    ikke passer fordi så lenge du kjøper et ITX/mATX/ATX/EATX hovedkort så følger de standard
+                    strømforsyningskabler. </p>
+                <div id="PSU_bilde">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/Sort_PSU.jpg" alt="PSU" width="400">
+                    <p>bilde tatt av</p>
+                    <a href="https://commons.wikimedia.org/wiki/File:Black_PC_power_supply_1.jpg" target="_blank">Ralf
+                        Roletschek fra Wikimedia Commons</a>
+                </div>
+            </div>
+            <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <div class="guide">
+            <p>Så la meg vise steg etter steg hvordan man bygger en PC!</p>
+            <a id="step1"></a>
+            <h3>steg 1 - Åpne "spaken" til sokkelen</h3>
+            <img src="bilder/PC_bygging/hvordan_bygge_PC/steps/step1_thumbnail.jpg" onclick="resumeGIF1()" class="GIF" alt="step1" id="step_1" width="800">
+            <div class="knapper_GIF">
+                <i class="fa-solid fa-circle-play" onclick="resumeGIF1()"></i>
+                <i class="fa-solid fa-circle-pause" onclick="pauseGIF1()" ></i>
+            </div>
+            <p>Steg 1 er å åpne spaken til sokkelen hvor du skal plassere prosessoren. Dette vil se annerledes ut på en
+                Intel sokkel så derfor vil jeg anbefale å se på en annen guide om du bygger en Intel PC</p>
+            <a href="https://www.intel.com/content/www/us/en/gaming/resources/how-to-build-a-gaming-pc.html"
+                target="_blank" id="Intel">Trykk her for en guide for å bygge Intel PC'er</a>
+                <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="step2"></a>
+            <h3>Steg 2 - Plasser prosessoren i sokkelen</h3>
+            <img src="bilder/PC_bygging/hvordan_bygge_PC/steps/step2_thumbnail.jpg" onclick="resumeGIF2()" class="GIF"  alt="step2" id="step_2" width="800">
+            <div class="knapper_GIF">
+                <i class="fa-solid fa-circle-play" onclick="resumeGIF2()"></i>
+                <i class="fa-solid fa-circle-pause" onclick="pauseGIF2()" ></i>
+            </div>
+            <p>"Align" Triangelen på sokkelen med triangelen på prosessoren og legg prosessoren forsiktig i sokkelen til
+                den sitter. Dytt veldig forsiktig for å kjenne om den sitter. Om den sitter kan du ta ned "spaken" til
+                sokkelen.</p>
+                <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="step3"></a>
+            <h3>Steg 3 - skru på kjøleren til prosessoren</h3>
+            <img src="bilder/PC_bygging/hvordan_bygge_PC/steps/step3_thumbnail.jpg" onclick="resumeGIF3()" class="GIF" alt="step3" id="step_3" width="800">
+            <div class="knapper_GIF">
+                <i class="fa-solid fa-circle-play" onclick="resumeGIF3()"></i>
+                <i class="fa-solid fa-circle-pause" onclick="pauseGIF3()" ></i>
+            </div>
+            <p>Steg 3 er å skru av de to plastikk delene over og under prosessoren (de har ikke noe ordentlig navn) ved
+                mindre manualen til kjøleren sier noe annet. Etter det kan du legge på prosessorkjøleren (og kjølepasta
+                om den ikke har det) også kobler du til ledningen
+                til kjøleren inn til "pins"-ene som ligger øverst på hovedkortet hvor det står "CPU_FAN". Dette er
+                "pins"-ene til prosessorkjøleren og gjør slik at kjølerens vifte spinner i takt med temperaturen til
+                prosessoren.</p>
+                <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="step4"></a>
+            <h3>Steg 4 - Installer RAM brikkene</h3>
+            <img src="bilder/PC_bygging/hvordan_bygge_PC/steps/step4_thumbnail.jpg" onclick="resumeGIF4()" class="GIF" alt="step4" id="step_4" width="800">
+            <div class="knapper_GIF">
+                <i class="fa-solid fa-circle-play" onclick="resumeGIF4()"></i>
+                <i class="fa-solid fa-circle-pause" onclick="pauseGIF4()" ></i>
+            </div>
+            <p>Steg 4 er å installere RAM, det gjør du ved å først åpne opp de plastikk "spakene" øverst og nederst på
+                RAM kanalene som ligger til høyre for CPU'en (NB noen hovedkort gjør slik at du bare kan åpne den
+                øverste, det betyr ikke at den er defekt, det betyr bare at du kanskje må dytte RAM-brikkene litt
+                hardere enn vanlig). Så må du "aligne" mellomrommet nederst på rambrikkene med det som er markert i rødt
+                i GIF-en på hovedkortet. Du skal høre to klikk på hver side av RAM brikkene, dette er "Spakene" øverst
+                og nederst som låser RAM brikken på plass, om du ikke hører klikk lyden så sjekk om "Spakene" er oppe og
+                prøv og dytt RAM brikkene litt hardere til du hører klikke lyden. Om du har 2 RAM brikker på et
+                hovedkort med kapasitet til 4 RAM brikker så bør du installere på RAM kanal 2 og 4 (1 er nærmest
+                prosessoren og 4 er den lengst fra prosessoren).</p>
+                <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="step5"></a>
+            <h3>Steg 5 - Installer M.2 SSD</h3>
+            <img src="bilder/PC_bygging/hvordan_bygge_PC/steps/step5_thumbnail.jpg" onclick="resumeGIF5()" class="GIF" alt="step5" id="step_5" width="800">
+            <div class="knapper_GIF">
+                <i class="fa-solid fa-circle-play" onclick="resumeGIF5()"></i>
+                <i class="fa-solid fa-circle-pause" onclick="pauseGIF5()" ></i>
+            </div>
+            <div id="Mdot2">
+                <p>Steg 5 er å installere M.2 SSD'en, dette er litt som å installere RAM bare sidelengs. Du skrur først
+                    inn M.2 Standoff'en som følger med i esken med hovedkortet. Du skrur den på vanligvis det 3
+                    skruhullet fra M.2 kanalen. Så puitter du SSD'en inn i M.2 kanalen på hovedkortet, den vil da få en
+                    vinkel på rundt 30 grader pluss minus. Da dytter du den ned med en finger og skrur den inn i
+                    standoff'en.
+                </p>
+                <div id="Mdot2_bilde">
+                    <img src="bilder/PC_bygging/hvordan_bygge_PC/30graderSSD.jpg" alt="mDot2_2" width="300">
+                    <p>bildet av SSD uten skrue tatt av:</p>
+                    <a href="https://commons.wikimedia.org/wiki/File:Qnap_qm2_IMGP2093_smial_wp.jpg" target=_blank>Smial
+                        fra Wikimedia Commons</a>
+                </div>
+            </div>
+            <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="step6"></a>
+            <h3>Steg 6 - Sett alt inn i kabinettet</h3>
+            <img src="bilder/PC_bygging/hvordan_bygge_PC/steps/step6_thumbnail.jpg" onclick="resumeGIF6()" class="GIF" alt="step6" id="step_6" width="800">
+            <div class="knapper_GIF">
+                <i class="fa-solid fa-circle-play" onclick="resumeGIF6()"></i>
+                <i class="fa-solid fa-circle-pause" onclick="pauseGIF6()" ></i>
+            </div>
+            <p>Steg 6 er å sette inn hovedkortet og skru det inn i kabinettet, det samme gjelder Strømforsyningen.
+                Hvilke skruer som går hvor står i bruksanvisningen til Kabinettet. Så kobler du til kablene der de
+                passer.</p>
+                <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <a id="step7"></a>
+            <h3>Step 7 - Sett inn skjermkortet</h3>
+            <img src="bilder/PC_bygging/hvordan_bygge_PC/steps/step7_thumbnail.jpg" class="GIF" onclick="resumeGIF7()" alt="step7" id="step_7" width="800">
+            <div class="knapper_GIF">
+                <i class="fa-solid fa-circle-play" onclick="resumeGIF7()"></i>
+                <i class="fa-solid fa-circle-pause" onclick="pauseGIF7()" ></i>
+            </div>
+            <p>Step 7, altså til slutt skrur du ut de to metall platene til venstre for hovedkortet og putter
+                skjermkortet inn i slotten/kanalen som den passer i, så skrur du den der hvor de metall platene var,
+                koble til strøm (i først skjermkortet også PC'en) også skrur du den på og sjekker om den kommer seg inn
+                i BIOS'en (Basic Input Output System) bare for å se at PC'en funker. Så kan du tilslutt laste ned
+                hvilket enn operativsystem du ønsker ved å laste det ned på en usb stick og kobler USB sticken til PC'en
+                og skrur PC'en på.</p>
+                <p>Kabinettet brukt i GIF'ene er tatt av</p>
+            <a href="https://commons.wikimedia.org/wiki/File:NZXT_ATX_Case_6_2019-03-21.jpg" id="kabinett_link" target="_blank">FASTILY fra Wikimedia Commons</a>
+                <a href="#topp_knapper"><p>Gå tilbake</p></a>
+            <h3>Ekstra informasjon</h3>
+            <p>Alle bildene brukt går under Creative Commons lisensen som er at jeg kan bruke de så lenge jeg krediterer skaperen av verket (i dette tilfelle bildet/fotografet). Bildene hvor jeg ikke har kreditert skaperen er bilder jeg har tatt selv, som F. Eks det øverste bilde er et bilde av min egen PC.</p>
+
+        <a id="ip"></a>
+        <h1 id="video_ip_overskrift">Hvordan se og endre IP adresse!</h1>
+        <iframe id="video_ip" src="https://www.youtube.com/embed/41h9DfteP7I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="footer">
+                <p>Copyright © Mikkel Huth Andersen 2021</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+        <!---Denne Javascript funksjonen skjuler de andre knappene i navigasjonen helt til man trykker på burger menyen-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dette er tittelen på siden/fanen-->
+    <title>Om meg</title>
+    <!--Dette er ikonet til fanen (den står til venstre for tittelen)-->
+    <link rel="icon" type="image/x-icon" href="bilder/MHA_logo.svg">
+    <link href="http://fonts.cdnfonts.com/css/ostrich-sans-2" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/ostrich-sans-2');
+    </style>
+    <!---Burger meny ikonet er fra "Font Awesome"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nett">
+        <div class="topp">
+            <div class="header"><a href="index.html"><img src="bilder/MHA_logo.svg" alt="Logo" width="100"></a></div>
+            <div class="pcnav">
+                <a href="index.html">
+                    <p>Hjem</p>
+                </a>
+                <a href="om_meg.html" class="active">
+                    <p>Om meg</p>
+                </a>
+                <a href="Plan_S.html">
+                    <p>Plan, skisse osv...</p>
+                </a>
+                <a href="designmanual.html">
+                    <p>Designmanual</p>
+                </a>
+                <a href="Portefolje.html">
+                    <p>Portefølje</p>
+                </a>
+                <a href="pc_bygging.html">
+                    <p>PC Bygging</p>
+                </a>
+                <a href="kort.html"><p>Lag Info Kort</p></a>
+            </div>
+            <div id="nav_768">
+                <a href="om_meg.html" class="active">
+                    <p>Om meg</p>
+                </a>
+                <div id="myLinks">
+                    <a href="index.html">
+                        <p>Hjem</p>
+                    </a>
+                    <a href="Plan_S.html">
+                        <p>plan, skisse osv...</p>
+                    </a>
+                    <a href="designmanual.html">
+                        <p>designmanual</p>
+                    </a>
+                    <a href="Portefolje.html">
+                        <p>portefølje</p>
+                    </a>
+                    <a href="pc_bygging.html">
+                        <p>PC Bygging</p>
+                    </a>
+                    <a href="kort.html"><p>Lag Info Kort</p></a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="innheld">
+            <!--Jeg delte opp a_info og b_info for å skille "a_info" = "Actual_info" og "b_info"="Basic_info" som at jeg kan få dem til å stå ved siden av hverandre-->
+            <div class="a_info">
+                <div class="kategorier">
+                    <a href="#school">school and education</a>
+                    <a href="#freetime">freetime</a>
+                </div>
+                <div id="video_om_meg">
+                    <h1>Video about me / Video om meg</h1>
+                    <iframe id="videoen_om_meg" src="https://www.youtube.com/embed/LaaLctP9Hf8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h1>Om meg/About me</h1>
+                <div class="general">
+                    <p>I'm Mikkel Huth Andersen. I was born at August 13th, 2005 which makes me 16 years old. I was born
+                        and
+                        I still live in Oslo. I like both programming and video production, especially editing. </p>
+                </div>
+                <div class="school">
+                    <a id="school"></a>
+                    <h3>School and education</h3>
+                    <p>I am currently attending to Kuben Videregående getting majors in IT and Media production and I am
+                        planning on taking a major in either programming or video editing. After that I'm thinking of
+                        studying law and get an education in copyright law and intellectual property. I've always wanted
+                        to
+                        learn enough programming to create either a software or website. Programmming was honestly way
+                        easier than I originally thought. I'd say I know enough to create a visually appealing website
+                        with
+                        basic buttons taking you to other sides, the main thing I am missing is JavaScript. With
+                        JavaScript
+                        I can learn how to make functions on a website, like a log in feature, upload feature etc.
+                    </p>
+                </div>
+                <div class="freetime">
+                    <a id="freetime"></a>
+                    <h3>free time</h3>
+                    <p>On my freetime I edit videos and build PC's. I have built both Gaming PC's and general work PC's.
+                        I
+                        have built a total of 11 PC's. I built my own
+                        PC, my sister's PC and some for my friends, the rest I sold on Finn.no with relatively good
+                        feedback. I have made a website through Shopify where I sell my PC's, I'm probably going to
+                        program a new website once I have learnt all I need to learn. But as of now it's esier to just
+                        make one on Shopify. They process payment, host the website secure. Right now the website address is "aebutikk.no"
+
+                        Here are some examples:</p>
+
+                    <div class="eksempelpc">
+                        <a href="https://www.finn.no/bap/forsale/ad.html?finnkode=209897083" target="_blank">Work PC</a>
+                        <a href="https://www.finn.no/bap/forsale/ad.html?finnkode=207961286" target="_blank">Gaming PC 1</a>
+                        <a href="https://www.finn.no/bap/forsale/ad.html?finnkode=214475128" target="_blank">Gaming PC 2</a>
+                        <a href="https://www.finn.no/bap/forsale/ad.html?finnkode=218074305" target="_blank">Gaming PC 3</a>
+                        <a href="https://www.finn.no/bap/forsale/ad.html?finnkode=229365563" target="_blank">Gaming PC 4</a>
+                        <a href="https://aebutikk.no/products/ae-bg6600-1-rgb" target="_blank">Gaming PC 5</a>
+                        <a href="https://www.finn.no/bap/forsale/ad.html?finnkode=248640965" target="_blank">Gaming PC 6</a>
+                    </div>
+
+                    <p>I have edited videos ever since I was 9 years old. I have edited on five different editing
+                        programs
+                        in total. I started with iMovie, then I tried using Final Cut Pro X free trial. I then
+                        discovered
+                        Vegas Pro 16.0 (which is the one I use now), and I hve tried Priemere Pro from time to time now
+                        that
+                        I have got access to it through school. I can keyframe, chroma key (green screen, blue screen
+                        etc...) use various video and audio effects, use saber effects, make custom masks, motion track
+                        (through keyframe) and much more.
+
+                        I have edited a wide variety of videos too! I edited a gaming video for a YouTuber. I also
+                        edited my
+                        own "discord video" which is essentially just a video where I talk with friends on Discord, and
+                        we
+                        for instance end up playing a party game together. I have also edited a music video for a
+                        friend, I
+                        have edited informative science videos, or history videos, both on historic events or on
+                        individuall
+                        YouTubers where I also provide criticism, and I present this in a kind off documentary type
+                        videos.
+
+                        Go to my portfolio website to see examples of videos I've edited:</p>
+                    <div class="portfolio">
+                        <a href="Portefolje.html">my portfolio</a>
+                    </div>
+                </div>
+            </div>
+            <div class="b_info">
+                <table>
+                    <tr>
+                        <th>
+                            <p>Mikkel Huth Andersen</p>
+                            <hr>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><img src="bilder/portretter/P1000512.JPG" alt="portrett" width="300">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Born: August 13th, 2005</p>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Resides in: Nordstrand, Oslo</p>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Hobbies: <br> PC Building, gaming, programming and video editing</p>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Student at: <br> Kuben vgs <br><br> Informasjonsteknologi og Medieproduksjon </p>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Speaks these languages: <br> <br> Norwegian (fluent) <br> English <br> German (basic)</p>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Programming languages: <br> HTML <br> CSS <br> <br> Currently learning: <br> JavaScript
+                                <br> PHP <br> <br> Wants to learn in the future: <br> C# <br> C++ <br> Python</p>
+                            <hr>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright © Mikkel Huth Andersen 2021</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

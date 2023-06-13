@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Dette er tittelen på siden/fanen-->
+  <title>Hjem</title>
+  <!--Dette er ikonet til fanen (den står til venstre for tittelen)-->
+  <link rel="icon" type="image/x-icon" href="bilder/MHA_logo.svg">
+  <link href="http://fonts.cdnfonts.com/css/ostrich-sans-2?styles=29063" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!---Burger meny ikonet er fra "Font Awesome"-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="bakgrunn">
+  <div class="nett">
+    <div class="topp">
+      <div class="header"><a href="index.html"><img src="bilder/MHA_logo.svg" alt="Logo" width="100"></a></div>
+      <div class="pcnav">
+        <a href="index.html" class="active">
+          <p>Hjem</p>
+        </a>
+        <a href="om_meg.html">
+          <p>Om meg</p>
+        </a>
+        <a href="Plan_S.html">
+          <p>Plan, skisse osv...</p>
+        </a>
+        <a href="designmanual.html">
+          <p>Designmanual</p>
+        </a>
+        <a href="Portefolje.html">
+          <p>Portefølje</p>
+        </a>
+        <a href="pc_bygging.html">
+          <p>PC Bygging</p>
+        </a>
+        <a href="kort.html">
+          <p>Lag Info Kort</p>
+        </a>
+      </div>
+      <div id="nav_768">
+        <a href="index.html" class="active">
+          <p>Hjem</p>
+        </a>
+        <div id="myLinks">
+          <a href="om_meg.html">
+            <p>Om meg</p>
+          </a>
+          <a href="Plan_S.html">
+            <p>plan, skisse osv...</p>
+          </a>
+          <a href="designmanual.html">
+            <p>designmanual</p>
+          </a>
+          <a href="Portefolje.html">
+            <p>portefølje</p>
+          </a>
+          <a href="pc_bygging.html">
+            <p>PC Bygging</p>
+          </a>
+          <a href="kort.html">
+            <p>Lag Info Kort</p>
+          </a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    <div class="innhold">
+      <div class="bilde1">
+        <img class="gif" src="bilder/MHA_logo.svg" alt="statisk_logo" id="logo" onclick="animertLogo()" width="600">
+      </div>
+
+      <div class="tekst1">
+        <h1>Velkommen til <br> min nettside</h1>
+      </div>
+    </div>
+    <div class="header12">
+      <h1>Utforsk nettsiden</h1>
+    </div>
+    <div class="kategorie">
+      <a href="om_meg.html">
+        <div class="om_meg">
+          <h3>Om Meg</h3>
+          <img src="bilder/portretter/bilde1.png" alt="omMegBilde" width="300">
+          <hr>
+          <p>Les om meg, utdannelse osv...</p>
+        </div>
+      </a>
+      <a href="Plan_S.html">
+        <div class="flytkart">
+          <h3>Flytkart, Skisse og mer</h3>
+          <img src="bilder/kategori_bilder/skisse.png" alt="skisseBilde" width="300">
+          <hr>
+          <p>Se hvordan jeg planla denne nettsiden!</p>
+        </div>
+      </a>
+      <a href="designmanual.html">
+        <div class="designmanual">
+          <h3>Designmanual</h3>
+          <img src="bilder/kategori_bilder/designmanual1.png" alt="DesignmanualBilde" width="300">
+          <hr>
+          <p>Se på designmanualen til nettsiden</p>
+        </div>
+      </a>
+      <a href="Portefolje.html">
+        <div class="portefolje">
+          <h3>Portefølje</h3>
+          <img src="bilder/kategori_bilder/portefølje_bilde.png" alt="portefoljeBilde" width="300">
+          <hr>
+          <p>Sjekk ut mitt tidligere arbeid!</p>
+        </div>
+      </a>
+      <a href="pc_bygging.html">
+        <div class="PC_Bygging">
+          <h3>PC Bygging</h3>
+          <img src="bilder/kategori_bilder/PCBygging.png" alt="PCBygging" width="200">
+          <hr>
+          <p>Siden jeg driver med PC bygging så har jeg laget en nettside om PC'er og delene de inneholder</p>
+        </div>
+      </a>
+      <a href="lag_din_egen_infoside.html">
+        <div class="infoside">
+          <h3>Infoside</h3>
+          <img src="bilder/kategori_bilder/infoside.png" alt="Hjem" width="300">
+          <hr>
+          <p>Lag din egen infoside</p>
+        </div>
+      </a>
+    </div>
+    <div class="footer">
+      <p>Copyright © Mikkel Huth Andersen 2021</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <!---Denne Javascript funksjonen skjuler de andre knappene i navigasjonen helt til man trykker på burger menyen-->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>

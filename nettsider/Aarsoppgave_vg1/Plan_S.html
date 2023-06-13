@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dette er tittelen på siden/fanen-->
+    <title>Plan, skisse og flytkart</title>
+    <!--Dette er ikonet til fanen (den står til venstre for tittelen)-->
+    <link rel="icon" type="image/x-icon" href="bilder/MHA_logo.svg">
+    <link href="http://fonts.cdnfonts.com/css/ostrich-sans-2" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/ostrich-sans-2');
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev1,
+        .next1 {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next1 {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev1:hover,
+        .next1:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext1 {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active1,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <!---Burger meny ikonet er fra "Font Awesome"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="nett">
+        <div class="topp">
+            <div class="header"><a href="index.html"><img src="bilder/MHA_logo.svg" alt="Logo" width="100"></a></div>
+            <div class="pcnav">
+                <a href="index.html">
+                    <p>Hjem</p>
+                </a>
+                <a href="om_meg.html">
+                    <p>Om meg</p>
+                </a>
+                <a href="Plan_S.html" class="active">
+                    <p>Plan, skisse osv...</p>
+                </a>
+                <a href="designmanual.html">
+                    <p>Designmanual</p>
+                </a>
+                <a href="Portefolje.html">
+                    <p>Portefølje</p>
+                </a>
+                <a href="pc_bygging.html">
+                    <p>PC Bygging</p>
+                </a>
+                <a href="kort.html"><p>Lag Info Kort</p></a>
+            </div>
+            <div id="nav_768">
+                <a href="Plan_S.html" class="active">
+                    <p>plan, skisse osv...</p>
+                </a>
+                <div id="myLinks">
+                    <a href="index.html">
+                        <p>Hjem</p>
+                    </a>
+                    <a href="om_meg.html">
+                        <p>Om meg</p>
+                    </a>
+                    <a href="designmanual.html">
+                        <p>designmanual</p>
+                    </a>
+                    <a href="Portefolje.html">
+                        <p>portefølje</p>
+                    </a>
+                    <a href="pc_bygging.html">
+                        <p>PC Bygging</p>
+                    </a>
+                    <a href="kort.html"><p>Lag Info Kort</p></a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="innhald">
+            <div class="pPlan">
+                <h1>Plan, skisse og flytkart</h1>
+                <p>Her kan du se hvordan jeg planla nettsiden!</p>
+                <h2 style="text-align:center">Plan</h2>
+                <div class="plan">
+                    <img src="bilder/plan_skisse_flytkart/plan/Plan_for_terminoppgave1.png" alt="plan_bilde" id="plan_bilde">
+                </div>
+            </div>
+            <div class="skisse">
+                <h1>Skisse</h1>
+                <div class="skisse_slides">
+                    <div class="slideshow-container">
+
+                        <div class="Slides fade">
+                            <div class="numbertext1">1 / 7</div>
+                            <img src="bilder/plan_skisse_flytkart/skisse/Terminoppgave1.jpeg" alt="Skisse1" style="width:100%">
+                            <div class="text">F o r s i d e</div>
+                        </div>
+
+                        <div class="Slides fade">
+                            <div class="numbertext1">2 / 7</div>
+                            <img src="bilder/plan_skisse_flytkart/skisse/Terminoppgave2.jpeg" alt="Skisse2" style="width:100%">
+                            <div class="text">M e n y</div>
+                        </div>
+
+                        <div class="Slides fade">
+                            <div class="numbertext1">3 / 7</div>
+                            <img src="bilder/plan_skisse_flytkart/skisse/Terminoppgave3.jpeg" alt="Skisse3" style="width:100%">
+                            <div class="text">O m  . m e g</div>
+                        </div>
+
+                        <div class="Slides fade">
+                            <div class="numbertext1">4 / 7</div>
+                            <img src="bilder/plan_skisse_flytkart/skisse/Terminoppgave4.jpeg" alt="Skisse4" style="width:100%">
+                            <div class="text">P l a n,  . s k i s s e   . o g   . f l y t k a r t   . o v e r   . n e t t s i d e n</div>
+                        </div>
+
+                        <div class="Slides fade">
+                            <div class="numbertext1">5 / 7</div>
+                            <img src="bilder/plan_skisse_flytkart/skisse/Terminoppgave5.jpeg" alt="Skisse5" style="width:100%">
+                            <div class="text">D e s i g n m a n u a l</div>
+                        </div>
+
+                        <div class="Slides fade">
+                            <div class="numbertext1">6 / 7</div>
+                            <img src="bilder/plan_skisse_flytkart/skisse/Terminoppgave6.jpeg" alt="Skisse6" style="width:100%">
+                            <div class="text">P o r t e f ø l j e</div>
+                        </div>
+
+                        <div class="Slides fade">
+                            <div class="numbertext1">7 / 7</div>
+                            <img src="bilder/plan_skisse_flytkart/skisse/Terminoppgave7.jpeg" alt="Skisse7" style="width:100%">
+                            <div class="text">E g e n v a l g t  . s i d e</div>
+                        </div>
+
+
+                        <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+                <p>Noe som er ganske synlig i etterkant er at nettsiden ble ganske annerledes enn hvordan skissen er.
+                    Dette er fordi jeg fikk mange nye ideer om nettsiden når jeg lagde den. Jeg slet blant annet å finne
+                    fonten som ble brukt i skissen, og jeg synes at logoen passa mer til forsiden enn png bildet av HTML
+                    kode. Jeg hadde også orginalt en burgermeny til venstre hjørne, men det var bare unødvendig, det er
+                    lettere å bare ha en meny som er synlig til en hver tid i stedet for å trykke på noen ekstra knapper
+                    (ved mindre det er på mobilversjon hvor skjermen er mye mindre)</p>
+            </div>
+            <h1>Flytkart</h1>
+            <img src="bilder/plan_skisse_flytkart/FLytkart/flytkart.jpg" width="800" id="flytkart" alt="flytkart">
+        </div>
+
+
+        <div class="footer">
+            <p>Copyright © Mikkel Huth Andersen 2021</p>
+        </div>
+    </div>
+    <!---Denne Javascript funksjonen skjuler de andre knappene i navigasjonen helt til man trykker på burger menyen-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("Slides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active1", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active1";
+        }
+    </script>
+</body>
+
+</html>

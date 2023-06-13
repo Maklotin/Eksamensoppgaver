@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karakter Kalkulator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="innhold">
+</script>
+        <h1>Karakter kalkulator</h1>
+        <hr>
+        <p>Skriv inn karakteren du har fått i de forskjellig fagene. Sett inn flere fag om noen mangler. Ikke skriv inn karakter om du ikke har faget. </p>
+    
+        <table class="fag_tabell">
+            <tr>
+                <td>
+                    <p id="fag1">Engelsk muntlig</p>
+                </td>
+                <td>
+                    <input type="number" class="input_el" min="1" max="6" id="Karakter1">
+                    <button onclick="endreFag(fag1)" id="endre_fag1"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag2">Engelsk skriftlig</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter2">
+                    <button onclick="endreFag(fag2)" id="endre_fag2"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag3">Norsk sidemål</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter3">
+                    <button onclick="endreFag(fag3)" id="endre_fag3"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag4">Norsk hovedmål</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter4">
+                    <button onclick="endreFag(fag4)" id="endre_fag4"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag5">Norsk muntlig</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter5">
+                    <button onclick="endreFag(fag5)" id="endre_fag5"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag6">Matte</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter6">
+                    <button  onclick="endreFag(fag6)"id="endre_fag6"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag7">Naturfag</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter7">
+                    <button onclick="endreFag(fag7)" id="endre_fag7"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag8">Samfunnsfag</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter8">
+                    <button onclick="endreFag(fag8)" id="endre_fag8"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag9">Fremmedspråk</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter9">
+                    <button onclick="endreFag(fag9)" id="endre_fag9"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag10">KRLE</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter10">
+                    <button onclick="endreFag(fag10)" id="endre_fag10"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag11">K&H</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter11">
+                    <button onclick="endreFag(fag11)" id="endre_fag11"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag12">Valgfag</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter12">
+                    <button onclick="endreFag(fag12)" id="endre_fag11"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag13">Musikk</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter13">
+                    <button onclick="endreFag(fag13)" id="endre_fag11"><p>Endre fag</p></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="fag14">Gym</p>
+                </td>
+                <td>
+                    <input type="number" min="1" max="6" class="input_el" id="Karakter14">
+                    <button onclick="endreFag(fag14)" id="endre_fag11"><p>Endre fag</p></button>
+                </td>
+            </tr>
+        </table>
+        
+
+        <div class="karakter_resultat">
+            <p>Ditt snitt er: </p>
+            <p id="resultat">[tom]</p>
+            <hr>
+        </div>
+        <div class="knapper_nederst">
+            <button id ="reset" onclick="reset()"><p>reset kalkulator</p></button>
+            <button id="regn_ut"><p>Regn ut</p></button>
+        </div>
+
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4549649369208385"
+    crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+</body>
+</html>

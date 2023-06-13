@@ -1,0 +1,1867 @@
+@font-face {
+    font-family: OstrichSansMedium;
+    src: url("font/OstrichSansMedium.otf") format("opentype");
+}
+
+/*Dette er bakgrunnsbildet. Jeg har tatt på no-repeat for at bildet/gifen ikke skal repetere seg om du scroller ned. background size er satt på
+"cover" slik at bildet dekker hele skjermen uanvhengig av oppløsningen til skjermen.*/
+body {
+    background-image: url("bilder/bakgrunn2.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    font-family: 'OstrichSansMedium';
+    font-size: 24px;
+}
+
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ".topp" er ansvarlig for å posisjonere både ".logo/.header" */
+.topp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px gray;
+    align-items: flex-end;
+    height: 200px;
+    transition: transform 0.5s ease;
+}
+
+#bakgrunn {
+    background-image: url("bilder/animert_bakgrunn2.gif");
+    background-size: contain;
+    margin-top: -30px;
+    padding-top: 30px;
+}
+
+#bakgrunnsfarge {
+    background-image: none;
+    background-color: whitesmoke;
+    background-size: cover;
+}
+
+.footer p {
+    text-shadow: 1px 1px 10px yellow;
+}
+
+.footer:hover {
+    transform:translateY(40px);
+    cursor: pointer;
+}
+
+/* ".logo" er brukt på "kategori.html" nettsiden fordi kategori.html 
+har ikke en nav oppe fordi hele nettsiden er bare en stor
+navigasjonsside. Derfor blir ikke ".topp" brukt heller som gjør at
+hvis jeg hadde brukt ".header" så hadde logoen blitt midtstilt. */
+.logo a{
+    transition: transform 0.5s ease;
+}
+
+.logo a:hover{
+    transform: scale(1.05)
+}
+
+
+/* dette er navigasjonen til mobilversjonen, display er satt på "none" fordi den ikke skal synes ved mindre du er på mobilversjonen */
+#nav_768 {
+    display: none;
+    flex-direction: row;
+    margin: 20px;
+}
+
+/* Dette er navigasjonen til alle skjermer over 768px store */
+.pcnav {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+#nav_768 p {
+    color: yellow;
+    text-shadow: 2px 2px teal;
+}
+
+#nav_768 a, .pcnav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'OstrichSansMedium';
+    font-weight: normal;
+    font-size: 24px;
+    margin: 20px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+    mix-blend-mode: difference;
+    transition: transform 0.5s ease
+}
+
+#nav_768 a.active, .pcnav a.active {
+    color: yellow;
+    text-shadow: 2px 2px teal;
+}
+
+#nav_768 a:hover, .pcnav a:hover {
+    color: cyan;
+    text-shadow: 2px 2px teal;
+    transform: scale(1.1);
+}
+
+/* ".innhold" endrer på strukturen på alt under nav'en. Så er er den
+satt på "justify-content: row" som vil si at alt vil legge seg i
+vannrett rekkefølge. */
+.innhold {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*".innhold2" er som innhold bare at div-ene skal gå i loddrett og ikke vannrett (column ikker row)
+men det skal ikke være bakgrunn som sånn på ".innhald". */
+
+.innhold2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.innhold2 h1 {
+    color: black;
+    font-weight: 400;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px black;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.innhold2 h2 {
+    color: black;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px black;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+
+/* Forskjellen på "innhold" og "innheld er bare synlig på mobilversjonen, "innheld" blir brukt i "om_meg.html" og på
+mobilversjonen skal jeg brukte "flex-direction: column-reverse" som at jeg får b_info øverst og a_info nederst.*/
+.innheld {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.innheld h1, .innhald h1 {
+    color: white;
+    font-weight: normal;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px black;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.innheld h2, .innhald h2 {
+    color: white;
+    font-weight: normal;
+    text-decoration: underline;
+    text-align: left;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.innheld h3, .innhald h3 {
+    color: white;
+    font-weight: normal;
+    text-decoration: underline;
+    text-align: center;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.innheld p, .innhald p {
+    color: white;
+    font-weight: normal;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+/* Forskjellen på "innhold" og "innhald" er at "innhold" er for forsiden, mens "innhald" er for alle andre sider. Dette er fordi oppsettet på
+forsiden og f. Eks Om Meg er forskjellig. Forsiden består av logoen og en tekst, Om Meg har overskrift, tekst, bilde og en sort gjennomsiktig bakgrunn
+å gjøre det lettere å lese */
+.innhald {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 10px 10px black;
+    padding: 30px 30px;
+    border-radius: 20px;
+    width: 70%;
+    margin: 10px 10px;
+    margin-left: 13%;
+}
+
+/* a_info inneholder mer fordypende informasjon om f. Eks fritid */
+.a_info {
+    background: rgba(0, 0, 0, 0.7);
+    margin-left: 100px;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px black;
+}
+
+/* b_info står for basic info og inneholder generel info som navn, alder osv... */
+.b_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px 50px;
+    padding: 50px 50px;
+   background: rgba(0,0,0,0.7);
+   height: 2350px;
+   border-radius: 20px;
+   box-shadow: 0px 0px 10px 10px black;
+}
+
+#video_om_meg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#videoen_om_meg {
+    width: 640px;
+    height: 360px;
+}
+
+.b_info table tr {
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border: 2px solid white;
+}
+
+.kategorier {
+    margin: 10px 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.kategorier a{
+   text-decoration: none;
+   color: yellow;
+   text-shadow: 2px 2px teal;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+.kategorier a:hover {
+   color: turquoise;
+   text-shadow: 2px 2px yellowgreen;
+}
+
+.portfolio, .eksempelpc {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+}
+
+.portfolio a, .eksempelpc a {
+   color: black;
+   background: yellow;
+   box-shadow: 5px 5px teal;
+   width: 300px;
+   margin: 10px 10px;
+   padding: 30px 30px;
+   text-decoration: none;
+   transition: transform 0.5s ease;
+}
+
+.portfolio a:hover, .eksempelpc a:hover {
+   color: white;
+   background: cyan;
+   box-shadow: 5px 5px teal;
+   transform:translateX(20px);
+}
+
+
+/* dette er teksten på forsiden som sier "din drøm til virkelighet" på forsiden og er skyggelagt og midtstilt for å gjøre den mer synlig og mer
+behagelig for øyenene å lese */
+.tekst1 h1 {
+    color: white;
+    mix-blend-mode:difference;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 72px;
+    font-family: 'OstrichSansMedium';
+    font-weight: normal;
+    margin-left: 100px;
+    text-align: center;
+}
+
+
+/* Mix-blend-mode gjør slik at bildet på forsiden blender inn med bakgrunnen. */
+.bilde1 img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+    mix-blend-mode:screen;
+    transition: transform 0.5s ease;
+}
+
+.bilde1 img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+}
+
+.bilde1 img:active {
+    transform: scale(1.1);
+    cursor:alias;
+}
+
+.header a {
+    transition: transform 0.5s ease;
+}
+/* ".header a" og ".header a:hover" gjør slik at når man tar musepekeren over logoen
+oppe til venstre, så vil logoen skalere med 110% */
+.header a:hover{
+    transform: scale(1.1);
+}
+
+.header h1 {
+    color: white;
+    mix-blend-mode:difference;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 72px;
+    font-family: 'OstrichSansMedium';
+    font-weight: normal;
+}
+
+.unn_knapp a{
+    text-decoration: none;
+    color: yellow;
+    text-shadow: 1px 1px teal;
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+ 
+ .unn_knapp {
+    margin-top: 100px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+.unn_knapp h1 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 22px;
+}
+
+ .unn_knapp a {
+    color: black;
+    background: yellow;
+    box-shadow: 5px 5px teal;
+    width: 200px;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+ }
+ 
+ .unn_knapp a:hover { 
+    color: white;
+    background: cyan;
+    box-shadow: 5px 5px teal;
+    transform: scale(1.1);
+ }
+
+.hn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header11 h1, .header12 h1 {
+    color: white;
+    font-family: 'OstrichSansMedium';
+    font-weight: normal;
+    text-align: center;
+    font-size: 72px;
+    text-shadow: 1px 1px black;
+    text-decoration: underline;
+}
+
+.header12 {
+    margin-top: 200px;
+}
+
+.kategorie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 270px;
+    margin-right: 270px;
+}
+
+.logo {
+    margin-top: 75px;
+    margin-left: 30px;
+}
+
+.infoside, .om_meg, .flytkart, .designmanual, .portefolje, .PC_Bygging {
+    width: 300px;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.8);
+    height: 400px;
+    margin-bottom: 90px;
+    transition: transform 0.5s ease;
+}
+
+.infoside h3, .om_meg h3, .designmanual h3, .portefolje h3, .PC_Bygging h3 {
+    font-weight: normal;
+    color: white;
+    font-size: 64px;
+    text-align: center;
+    margin: 10px;
+    text-decoration: underline;
+    text-shadow: 2px 2px black;
+}
+
+.infoside p, .om_meg p, .flytkart p, .designmanual p, .portefolje p {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+.infoside a, .om_meg a, .flytkart a, .designmanual a, .portefolje a, .PC_Bygging a {
+    text-decoration: none;
+    color: white;
+}
+
+.infoside hr, .om_meg hr, .flytkart hr, .designmanual hr, .portefolje hr, .PC_Bygging hr {
+    color: white;
+    border: 1px solid white;
+}
+
+.infoside:hover, .om_meg:hover, .flytkart:hover, .designmanual:hover, .portefolje:hover, .PC_Bygging:hover {
+    transform: scale(1.05);
+    background: rgba(0, 217, 255, 0.479);
+}
+
+.om_meg img {
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.flytkart h3 {
+    font-weight: normal;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin: 10px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px black;
+}
+
+.PC_Bygging p {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    font-size: 20px;
+}
+
+.Oslo_lacrosse, .Abra_Havn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tekst_OL, .tekst_AH {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tekst_OL p, .tekst_AH p {
+    text-align: left;
+}
+
+.nettsider h1, .Oslo_lacrosse h1, .videoer h1, .logoer h1, .Abra_Havn h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Oslo_lacrosse img {
+    margin: 20px 20px;
+}
+
+.Abra_Havn img {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 20px 20px;
+    padding: 20px 20px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+#NB {
+    color: red;
+    text-shadow: 2px 2px darkred;
+    text-align: left;
+}
+
+.Oslo_lacrosse a, .Abra_Havn a {
+    color: black;
+    background: yellow;
+    box-shadow: 5px 5px teal;
+    width: 200px;
+    margin: 20px 50px;
+    padding: 10px 300px;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+ }
+
+ #KKKnapp {
+     color: black;
+     background-color: yellow;
+     box-shadow: 5px 5px teal;
+     margin: 20px 50px;
+     padding: 10px 300px;
+     text-decoration: none;
+     transition: transform 0.5s ease;
+ }
+
+.KarakterK, .MHA_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.KarakterK img {
+    transition: transform 0.5s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+}
+
+.KarakterK img:hover {
+    transform: scale(1.5);
+}
+
+.kn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+ .Oslo_lacrosse a:hover, #KKKnapp:hover, .Abra_Havn a:hover , .s_videoer a:hover, .y_knapp a:hover, .dmknapp a:hover {
+    color: white;
+    background: cyan;
+    box-shadow: 5px 5px teal;
+    transform: scale(1.05);
+ }
+
+#OL_bilder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+#OL_index {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: transform 0.5s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+}
+
+#OL_index:hover {
+    transform: scale(2.5);
+}
+
+#OL_OmOss, #OL_Kalender {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: transform 0.5s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+}
+
+#OL_OmOss:hover, #OL_Kalender:hover {
+    transform: scale(2.5)
+}
+
+.innhald hr {
+    width: 90%;
+}
+
+.f_videoer, .KvadratK_info, .MHA_info, .fargerr {
+    display: flex;
+    flex-direction: row;
+}
+
+.skoleprosjekter, .andre_videoer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+
+.s_videoer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.s_videoer a, .y_knapp a, .dmknapp a, .portfolio a, .eksempelpc a {
+    color: black;
+    background: yellow;
+    box-shadow: 5px 5px teal;
+    width: 200px;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+}
+
+.y_knapp {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoer1 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.KvadratK_info p {
+    text-align: left;
+    margin: 30px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height:400px;
+}
+
+#KvadratK_P1 {
+    background-color: white;
+    box-shadow: 0px 0px 14px white;
+    transition: transform 0.5s ease;
+}
+
+#KvadratK_P1:hover {
+    transform: scale(1.2);
+}
+
+#KvadratK_P2, .MHA_logoP, #MHA_farger, #MHA_black, #MHAgrayscale {
+    transition: transform 0.5s ease;
+}
+
+#KvadratK_P2:hover, #MHA_farger:hover, #MHA_black:hover, #MHAgrayscale:hover {
+    transform: scale(1.2);
+}
+
+.MHA_logoP:hover {
+    transform: scale(1.3);
+}
+
+.MHA_info p {
+    height: 400px;
+    text-align: left;
+}
+
+.logoer1 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px 20px;
+    margin: 20px 20px;
+    flex-wrap: wrap;
+}
+
+ #perimeter {
+     transition: transform 0.5s ease;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     width: 100%;
+ }
+
+#perimeter:hover {
+    transform: scale(1.05)
+}
+
+.fargerBrukt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+}
+
+.Ff2e600, .Ffde100 {
+    width: 100px;
+    height: 100px;
+    background-color: #f2e600;
+    border: 2px solid black;
+}
+
+.Ffde100 {
+    width: 100px;
+    height: 100px;
+    background-color: #fde100;
+    border: 2px solid black;
+}
+
+.F7cbe73 {
+    width: 100px;
+    height: 100px;
+    background-color: #7cbe73;
+    border: 2px solid black;
+}
+
+.F38b8be {
+    width: 100px;
+    height: 100px;
+    background-color: #38b8be;
+    border: 2px solid black;
+}
+
+.F008182 {
+    width: 100px;
+    height: 100px;
+    background-color: #008182;
+    border: 2px solid black;
+}
+
+.fargeKode {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+}
+
+.Tf2e600 p, .Tfde100 p, .T7cbe73 p, .T38b8be p, .T008182 p {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.fonts {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.font1 {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    width: 500px;
+    height: 200px;
+    justify-content: center;
+    line-height: 28px;
+}
+
+.font1 h6 {
+    color: white;
+    font-weight: normal;
+}
+
+.font2 h6 {
+    color: white;
+}
+
+/*PC Bygging nettsiden */
+
+li {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#PC_deler_knapper a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 0px 5px black;
+}
+
+#PC_deler_knapper2 {
+    display: none;
+}
+
+#PC_deler_knapper a:hover{
+    text-shadow: 0px 0px 5px yellow;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#knapp1PC {
+    position:relative;
+    left: 650px;
+    top: 290px
+}
+
+#knapp2PC {
+    position:relative;
+    left: 30px;
+    top: 145px
+}
+
+#knapp3PC {
+    position: relative;
+    left: 500px;
+    top: 215px;
+}
+
+#knapp4PC {
+    position: relative;
+    right: 100px;
+    top: 215px;
+}
+
+#knapp5PC {
+    position: relative;
+    left: 450px;
+    top: 360px;
+}
+
+#knapp6PC {
+    position: relative;
+    right: 270px;
+    top: 330px;
+}
+
+#knapp7PC {
+    position: relative;
+    left: 240px;
+    top: 110px;
+}
+
+#knapp8PC {
+    position: relative;
+    top: 480px;
+    left: 50px;
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: large;
+    background-color: cyan;
+    border: none;
+    padding: 10px 10px;
+    box-shadow: 5px 5px 5px blue;
+    transition: transform 0.5s ease;
+}
+
+#knapp8PC:hover {
+    transform: translatex(-20px);
+    cursor: pointer;
+}
+
+#knapp9PC{
+    display: none;
+    position: relative;
+    top: 480px;
+    left: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    background-color: rgb(0, 255, 98);
+    padding: 10px 10px;
+    box-shadow: 4px 4px 4px rgb(0, 153, 10);
+    border: none;
+}
+
+
+
+#hovedkort_tekst, #CPU {
+    display: flex;
+    flex-direction: row;
+}
+
+#hovedkort_tekst p, #CPU p, #RAM p, #GPU p, #Lagring p, #PSU p {
+    text-align: left;
+    margin: 30px;
+    font-size: 24px;
+}
+
+#hovedkort_bilde, #CPU_bilde, #RAM_bilde, #PSU_bilde {
+    margin: 30px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#hovedkort_bilde a, #CPU_bilde a, #RAM_bilde a, #PSU_bilde a, #Mdot2 a, #kabinett_link {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: blue;
+    text-shadow: 0px 0px 3px white;
+}
+
+#RAM, #GPU, #Lagring, #PSU {
+    display: flex;
+} 
+
+#GPU_bilde {
+    margin: 30px;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    flex-direction: column;
+}
+
+#GPU_bilde p {
+    font-size: 16px;
+}
+
+#GPU_bilde a {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: blue;
+    font-size: 16px;
+    text-shadow: 0px 0px 3px white;
+    text-align: center;
+}
+
+
+#Lagring_bilder {
+    margin: 30px;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Lagring_bilder a {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: blue;
+    font-size: 16px;
+    text-shadow: 0px 0px 3px white;
+}
+
+.guide, .pPlan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Intel {
+    background-color: yellow;
+    box-shadow: 5px 5px teal;
+    padding: 20px 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    transition: transform 0.5s ease;
+}
+
+#Intel:hover {
+    background-color: cyan;
+    box-shadow: 5px 5px teal;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#Mdot2 {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+}
+
+#Mdot2 p {
+    text-align: left;
+    margin: 20px;
+    width: 400px;
+}
+
+#Mdot2_bilde {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.knapper_guide{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.knapper_guide a, #PC_deler_knapper2 a, #ip_knapp {
+    color: yellow;
+    text-shadow: 2px 2px teal;
+    text-decoration: none;
+}
+
+.knapper_guide a:hover, #PC_deler_knapper2 a:hover, #ip_knapp:hover {
+    color: cyan;
+    text-shadow: 2px 2px teal;
+}
+
+.knapper_GIF {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.knapper_GIF i, #Kort_instillinger button, #Kort_instillinger input {
+    color: yellow;
+    text-shadow: 2px 2px teal;
+    font-size: 48px;
+    transition: transform 0.5s ease;
+}
+
+.knapper_GIF i:hover, #Kort_instillinger button:hover, #Kort_instillinger input:hover   {
+    color: cyan;
+    text-shadow: 2px 2px teal;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.knapper_GIF i:active {
+    color: teal;
+    text-shadow: 2px 2px cyan;
+    cursor: wait;
+    transform: scale(1.1);
+}
+
+
+#PC_deler_knapper {
+    width: 960px;
+    height: 540px;
+    background-image: url("bilder/PC_bygging/PC/loop.gif");
+    background-size: cover;
+}
+
+#video_ip {
+    width: 560px; 
+    height: 315px;
+}
+
+
+/* Plan, skisse og flytkart */
+
+.plan {
+    background-color: rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#plan_bilde {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+#plan_bilde:hover, #flytkart:hover {
+    transform: scale(1.4);
+}
+
+
+.skisse {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#flytkart {
+    transition: transform 0.5s ease;
+    margin-bottom: 90px;
+}
+
+/*Lag Info Kort*/
+
+#kort {
+    border: 2px solid black;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px black;
+    background-color: white;
+}
+
+#top_kort {
+    display: flex;
+    flex-direction: row;
+}
+
+#kort_bilde {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 50px;
+}
+
+#kort_bilde_img {
+    width: 200px;
+    height: 200px;
+}
+
+#kort_navn {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-shadow: none;
+    position: relative;
+    top: 10px;
+    width: 600px;
+}
+
+#kort_navn, .editable {
+    cursor: pointer;
+}
+
+#kort_info2 {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#kort_info2 p, #skole_kort p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    margin-top: 0px;
+}
+
+#pronomen {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#bosted {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    width: 200px;
+}
+
+#bosted p {
+    margin-left: -16px;
+}
+
+#bio {
+    height: 250px;
+    width: 600px;
+    max-width: 600px;
+    max-height: 250px;
+    margin-left: 50px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+#bunn_kort {
+    display: flex;
+    flex-direction: row;
+}
+
+#bunn_kort p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Kort_instillinger {
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 5px 5px 5px 5px black;
+    margin: 30px;
+}
+
+#Kort_instillinger td {
+    border: 2px solid black;
+}
+
+#Kort_instillinger button, #Kort_instillinger input, #Kort_instillinger p, #print_kort, #velg_font_select {
+    color: yellow;
+    text-shadow: 2px 2px teal;
+    font-size: 28px;
+    transition: transform 0.5s ease;
+    margin: 20px;
+}
+
+#Kort_instillinger button:hover, #Kort_instillinger input:hover, #print_kort:hover, #velg_font_select:hover {
+    color: cyan;
+    text-shadow: 2px 2px teal;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+/*Mobilversjon, en telefon er sjeldent bredere enn 768px download more ram*/
+@media screen and (max-width: 768px) {
+    
+    body {
+        background-image: url("bilder/bakgrunn768.png");
+        background-repeat: repeat;
+        background-size:inherit;
+        overflow-x:hidden;
+    }
+
+    #bakgrunn {
+        background-image: url("bilder/animert_bakgrunn768.gif");
+        background-size: contain;
+    }
+
+    /*gjør logoen usynelig fordi den er bare i veien på mobilversjonen*/
+    .logo, .header, .pcnav, .nav_768 #myLinks {
+        display: none;
+    }
+
+    .innhold {
+        width: 360px;
+    }
+
+    #nav_768 {
+        display: flex;
+        overflow: hidden;
+        background-color: rgba(20, 20, 20, 0.7);     
+        width: 360px;
+    }
+
+    #nav_768 a {
+        color: rgba(255, 255, 255, 0.3);
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    #nav_768 a.icon {
+        display: block;
+        position:absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    #nav_768 a:hover {
+        background-color: cyan;
+        color: black;
+      }
+
+    .active {
+        background-color: white;
+        color: white;
+    }
+
+    .bilde1 {
+        justify-content: center;
+        align-self: center;
+        width: 200px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+
+    .bilde1:hover {
+        width: 200px;
+        height: 100px;
+    }
+
+    .bilde1 img, .bilde1 img:hover{
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    margin-left: -50px;
+    justify-content: center;
+    align-self: center;
+    }
+    
+    
+    .tekst1 h1 {
+        font-size: 44px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+    }
+    .innhold {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .innhald {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 35px;
+    }
+
+    .kategorie {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 1700px;
+        margin-left: 220px;
+    }
+
+    
+    .infoside h3, .om_meg h3, .designmanual h3, .portefolje h3, .PC_Bygging h3 {
+        font-weight: normal;
+        color: white;
+        font-size: 32px;
+        text-align: center;
+        margin: 10px;
+        text-decoration: underline;
+        text-shadow: 2px 2px black;
+    }
+    
+    .infoside p, .om_meg p, .flytkart p, .designmanual p, .portefolje p, .PC_Bygging p {
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px black;
+        font-size: 12px;
+    }
+    
+    .infoside a, .om_meg a, .flytkart a, .designmanual a, .portefolje a, .PC_Bygging a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .infoside hr, .om_meg hr, .flytkart hr, .designmanual hr, .portefolje hr, .PC_Bygging hr {
+        color: white;
+        border: 1px solid white;
+        width: 100%;
+    }
+
+    .infoside img {
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .infoside:hover, .om_meg:hover, .flytkart:hover, .designmanual:hover, .portefolje:hover, .PC_Bygging:hover {
+        transform: scale(1.05);
+    }
+    
+    .infoside, .om_meg, .flytkart, .designmanual, .portefolje, .PC_Bygging {
+        width: 200px;
+        padding: 20px 20px;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.8);
+        height: 200px;
+        transition: transform 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .om_meg img {
+        width: 60%;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    
+    .flytkart h3 {
+        font-weight: normal;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        margin: 10px;
+        margin-top: 20px;
+        text-decoration: underline;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px black;
+    }
+
+
+    .flytkart img, .designmanual img, .portefolje img, .PC_Bygging img {
+        width: 60%;
+    }
+
+    
+
+    /* Designmanual på mobilversjon */
+
+    .fargeKode {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 620px;
+    }
+
+    .fargeKode p {
+        font-size: 18px;
+    }
+
+    .fonts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+    }
+
+    .font1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .font1 h6, .font2 h6 {
+        font-weight: normal;
+    }
+
+    
+    .nettsider, .tekst_OL {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nettsider hr {
+        width: 20%;
+    }
+
+    #perimeter img{
+        width: 100px;
+    }
+
+
+    /* mobilversjon av Portefølje */
+    .Oslo_lacrosse, .Abra_Havn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header11 h1{
+        font-size: 48px;
+    }
+
+
+    .tekst_OL p, .tekst_AH p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #NB {
+        text-align: center;
+    }
+
+    .kn a {
+        display:none;
+    }
+
+    #OL_bilder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300%;
+    }
+    
+    #OL_index, #OL_OmOss, #OL_Kalender {
+        width: 30%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        transition: transform 0.5s ease;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+    }
+    
+    #OL_index:hover, #OL_OmOss:hover, #OL_Kalender:hover {
+        transform: scale(1.5);
+    }
+    
+    .KarakterK, .KarakterK img {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    #KKKnapp {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    .videoer, .f_videoer, .KvadratK, .MHA_info, .MHA_logoer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .videoer hr, .logoer hr {
+        width: 40%;
+    }
+
+    .KvadratK h1 {
+        width: 300px;
+    }
+
+    .KvadratK_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .KvadratK_info p {
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .logoer {
+        width: 100%;
+    }
+
+    .logoer1 img {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .MHA_info p, .innhald p, .a_info p, .innhald ol li {
+        font-size: 16px;
+    }
+
+    .MHA_logoer img {
+        width: 50%;
+        height: 50%;
+    }
+
+
+    /* "Om meg" telefonversjon */
+    .innheld {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #videoen_om_meg {
+        width: 320px;
+        height: 180px;
+    }
+
+    .a_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        margin: 20px 20px;
+    }
+    .b_info {
+        height: 1600px;
+    }
+
+
+    .portfolio {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+     }
+     
+     .portfolio a:hover, .eksempelpc a:hover {
+        color: white;
+        background: cyan;
+        box-shadow: 5px 5px teal;
+        transform:translateX(20px);
+     }
+     
+     .eksempelpc {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+     }
+     
+     /* gjorde font-sizen på footeren mindre slik at hele teksten får plass på skjermen */
+     .footer p {
+         font-size: 16px;
+         text-shadow: 2px 2px 2px yellow;
+     }
+
+
+     /* PC Bygging nettsida */
+
+     .knapper_guide {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+         align-items: center;
+     }
+
+     .knapper_guide a {
+         margin: 10px;
+         text-align: center;
+     }
+
+     #PC_deler_knapper {
+         display: none;
+     }
+
+     #PC_deler_knapper2 {
+         display: flex;
+         flex-direction: column;
+     }
+
+
+     #hovedkort {
+        display: flex;
+        flex-direction: column;
+     }
+
+     #hovedkort_tekst, #CPU, #RAM, #GPU, #Lagring, #PSU, .guide, #Mdot2{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 400px;
+     }
+
+     #hovedkort_tekst p, #CPU p, #RAM p, #GPU p, #Lagring p, #PSU p, .guide p, #Mdot2 p{
+        text-align: center;
+        width: 300px;
+        font-size: 16px;
+     }
+
+     #hovedkort_bilde, #CPU_bilde, #RAM_bilde, #GPU_bilde, #Lagring_bilder, #PSU_bilde, #Mdot2_bilde {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+     }
+
+     #hovedkort_bilde img {
+        width: 200px;
+     }
+
+     #hovedkort_bilde a, #CPU_bilde a, #RAM_bilde a, #Lagring_bilder a, #Mdot2_bilde a{
+         font-size: 12px;
+         text-align: center;
+     }
+
+     #CPU_bilde img{
+         width: 50%;
+     }
+
+     #RAM_bilde img, #GPU_bilde img, #PSU_bilde img {
+         width: 90%;
+     }
+
+     .GIF {
+         width: 300px;
+     }
+
+     #Intel {
+         font-size: 8px;
+         width: 200px;
+     }
+
+     #kabinett_link {
+         font-size: 16px;
+     }
+
+     #video_ip_overskrift {
+         font-size: 32px;
+     }
+
+     #video_ip {
+         width: 320px;
+         height: 180px;
+     }
+
+
+    /*Plan skisse og flytkart mobilversjon */
+
+     .nett {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+
+    #flytkart {
+        width: 100%;
+    }
+
+    /*Lag info kort side*/
+    #kort {
+        width: 333px;
+        height: 200px;
+    }
+
+    #kort_bilde {
+        width: 75px;
+        height: 75px;
+        margin: 10px;
+    }
+
+    #kort_bilde_img {
+        width: 75px;
+        height: 75px;
+    }
+
+    #kort_navn {
+        width: 200px;
+        font-size: 24px;
+        position: relative;
+        top: 3px;
+        margin-top: 0px;
+    }
+
+    #kort_info2 {
+        margin-top: -10px;
+        width: 160px;
+        height: 18px;
+    }
+
+    #kort_info2 p, #skole_kort p {
+        margin: 0px;
+        margin-top: 0px;
+        font-size: 12px;
+    }
+
+    #bosted {
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        width: 200px;
+    }
+
+    #bio {
+        height: 100px;
+        width: 200px;
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-right: 4px;
+    }
+    #bunn_kort p {
+        font-size: 12px;
+    }
+
+    
+#Kort_instillinger {
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 5px 5px 5px 5px black;
+    margin: 30px;
+}
+
+#Kort_instillinger td {
+    border: 2px solid black;
+}
+
+#Kort_instillinger button, #Kort_instillinger input, #Kort_instillinger p, #print_kort, #velg_font_select {
+    color: yellow;
+    text-shadow: 2px 2px teal;
+    font-size: 14px;
+    transition: transform 0.5s ease;
+    margin: 20px;
+}
+
+#Kort_instillinger button:hover, #Kort_instillinger input:hover, #print_kort:hover, #velg_font_select:hover {
+    color: cyan;
+    text-shadow: 2px 2px teal;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+    
+
+}
+
+/* må også gjøre et par justeringer på skjermer med 1440p (2560x1440) fordi f.Eks flexbox funksjonene på sider som "kategori.html" funker ikke som de skal. */
+@media screen and (min-width: 2200px) {
+
+    .footer {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .innhold {
+        height: 600px;
+    }
+
+    /* Om meg */
+    .innheld {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .b_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 1850px;
+    }
+
+    .a_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 1850px;
+    }
+
+    /* Designmanual */
+
+    #perimeter {
+        width: 50%;
+    }
+
+    .kategorie {
+        width: 1200px;
+    }
+
+    .hn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*Logoen på kategori nettsiden ble midtstilt når man åpner nettsiden på en
+    1440p skjerm, så jeg måtte endre margin-left til -2350 for at den skulle være
+    plassert lik som logoen på de andre sidene. */
+    .logo {
+        margin-left: -2350px;
+    }
+}
