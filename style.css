@@ -108,17 +108,20 @@ body{
 
 .info p {
     margin: 6vh;
+    width: 60%;
 }
 
 .bilder {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    
 }
 
 .scrnsht {
-    width: 40%;
     height: 40%;
+    width: 40%;
     margin-right: 2vh;
     box-shadow: 0vh 0vh 1vh yellow;
     margin-top: 2vh;
