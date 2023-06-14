@@ -3,6 +3,10 @@
     src: url("font/OstrichSansMedium.otf") format("opentype");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*Dette er bakgrunnsbildet. Jeg har tatt på no-repeat for at bildet/gifen ikke skal repetere seg om du scroller ned. background size er satt på
 "cover" slik at bildet dekker hele skjermen uanvhengig av oppløsningen til skjermen.*/
 body {
